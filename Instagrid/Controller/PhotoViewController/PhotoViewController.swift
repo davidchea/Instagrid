@@ -14,10 +14,13 @@ class PhotoViewController: UIViewController {
     
     let instagridImageView: UIImageView = {
         let instagridImageView = UIImageView(image: UIImage(named: "Instagrid"))
+        instagridImageView.contentMode = .scaleAspectFit
         instagridImageView.translatesAutoresizingMaskIntoConstraints = false
         
         return instagridImageView
     }()
+    
+    
     
     var portraitConstraints = [NSLayoutConstraint]()
     var landscapeConstraints = [NSLayoutConstraint]()
@@ -34,11 +37,7 @@ class PhotoViewController: UIViewController {
         addLandscapeConstraints()
     }
     
-    // MARK: - Inherited method
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        
+    override func viewDidLayoutSubviews() {
         if UIDevice.current.orientation.isPortrait {
             NSLayoutConstraint.deactivate(landscapeConstraints)
             NSLayoutConstraint.activate(portraitConstraints)

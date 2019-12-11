@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		633EF2ED23A151A000C611DF /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633EF2EC23A151A000C611DF /* PhotoView.swift */; };
 		63982586239FEC470019DF2F /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63982585239FEC470019DF2F /* PhotoViewController.swift */; };
 		63982589239FF9220019DF2F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63982588239FF9220019DF2F /* UIColor.swift */; };
 		63AB9BA7239FE6D7003A22A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB9BA6239FE6D7003A22A4 /* AppDelegate.swift */; };
@@ -15,9 +16,11 @@
 		63B0AA7523A048100078965E /* PhotoViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B0AA7423A048100078965E /* PhotoViewController+View.swift */; };
 		63B0AA7723A048240078965E /* PhotoViewController+Portrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B0AA7623A048240078965E /* PhotoViewController+Portrait.swift */; };
 		63B0AA7A23A056090078965E /* PhotoViewController+Landscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B0AA7923A056090078965E /* PhotoViewController+Landscape.swift */; };
+		63E9491123A1567A001CA74B /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9491023A15679001CA74B /* SwipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		633EF2EC23A151A000C611DF /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		63982585239FEC470019DF2F /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		63982588239FF9220019DF2F /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		63AB9BA3239FE6D7003A22A4 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +31,7 @@
 		63B0AA7423A048100078965E /* PhotoViewController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoViewController+View.swift"; sourceTree = "<group>"; };
 		63B0AA7623A048240078965E /* PhotoViewController+Portrait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoViewController+Portrait.swift"; sourceTree = "<group>"; };
 		63B0AA7923A056090078965E /* PhotoViewController+Landscape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoViewController+Landscape.swift"; sourceTree = "<group>"; };
+		63E9491023A15679001CA74B /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,15 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		633EF2EB23A1514000C611DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63E9491023A15679001CA74B /* SwipeView.swift */,
+				633EF2EC23A151A000C611DF /* PhotoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		63982587239FF8700019DF2F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +100,7 @@
 		63AB9BA5239FE6D7003A22A4 /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
+				633EF2EB23A1514000C611DF /* View */,
 				6308CE03239FE7C400BC0B0F /* Controller */,
 				63982587239FF8700019DF2F /* Extension */,
 				6308CE04239FE7D100BC0B0F /* Support */,
@@ -180,7 +194,9 @@
 				63982586239FEC470019DF2F /* PhotoViewController.swift in Sources */,
 				63982589239FF9220019DF2F /* UIColor.swift in Sources */,
 				63AB9BA7239FE6D7003A22A4 /* AppDelegate.swift in Sources */,
+				63E9491123A1567A001CA74B /* SwipeView.swift in Sources */,
 				63AB9BA9239FE6D7003A22A4 /* SceneDelegate.swift in Sources */,
+				633EF2ED23A151A000C611DF /* PhotoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

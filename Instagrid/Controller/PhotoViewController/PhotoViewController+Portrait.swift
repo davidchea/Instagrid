@@ -11,7 +11,9 @@ extension PhotoViewController {
     // MARK: - Method
     
     func addPortraitConstraints() {
-        portraitConstraints.append(instagridImageView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor))
-        portraitConstraints.append(instagridImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30))
+        portraitConstraints.append(instagridImageView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.3))
+        portraitConstraints.append(instagridImageView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.1))
+        portraitConstraints.append(instagridImageView.centerXAnchor.constraint(equalToSystemSpacingAfter: view.safeAreaLayoutGuide.centerXAnchor, multiplier: 1))
+        portraitConstraints.append(instagridImageView.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 1))
     }
 }
