@@ -7,19 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630A6B1823A28294003BD368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630A6B1723A28294003BD368 /* LaunchScreen.storyboard */; };
+		630A6B1B23A28FD0003BD368 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 630A6B1A23A28FD0003BD368 /* Delm-Medium.otf */; };
+		630A6B1D23A2AA39003BD368 /* SwipeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630A6B1C23A2AA39003BD368 /* SwipeStackView.swift */; };
 		633EF2ED23A151A000C611DF /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633EF2EC23A151A000C611DF /* PhotoView.swift */; };
 		63982586239FEC470019DF2F /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63982585239FEC470019DF2F /* PhotoViewController.swift */; };
 		63982589239FF9220019DF2F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63982588239FF9220019DF2F /* UIColor.swift */; };
 		63AB9BA7239FE6D7003A22A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB9BA6239FE6D7003A22A4 /* AppDelegate.swift */; };
 		63AB9BA9239FE6D7003A22A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB9BA8239FE6D7003A22A4 /* SceneDelegate.swift */; };
 		63AB9BB0239FE6DB003A22A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63AB9BAF239FE6DB003A22A4 /* Assets.xcassets */; };
-		63B0AA7523A048100078965E /* PhotoViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B0AA7423A048100078965E /* PhotoViewController+View.swift */; };
 		63B0AA7723A048240078965E /* PhotoViewController+Portrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B0AA7623A048240078965E /* PhotoViewController+Portrait.swift */; };
 		63B0AA7A23A056090078965E /* PhotoViewController+Landscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B0AA7923A056090078965E /* PhotoViewController+Landscape.swift */; };
-		63E9491123A1567A001CA74B /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9491023A15679001CA74B /* SwipeView.swift */; };
+		63E9491123A1567A001CA74B /* InstagridStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9491023A15679001CA74B /* InstagridStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		630A6B1723A28294003BD368 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		630A6B1A23A28FD0003BD368 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Delm-Medium.otf"; path = "../../../../../../../../Desktop/Delm-Medium.otf"; sourceTree = "<group>"; };
+		630A6B1C23A2AA39003BD368 /* SwipeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeStackView.swift; sourceTree = "<group>"; };
 		633EF2EC23A151A000C611DF /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		63982585239FEC470019DF2F /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		63982588239FF9220019DF2F /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -28,10 +33,9 @@
 		63AB9BA8239FE6D7003A22A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		63AB9BAF239FE6DB003A22A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63AB9BB4239FE6DB003A22A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63B0AA7423A048100078965E /* PhotoViewController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoViewController+View.swift"; sourceTree = "<group>"; };
 		63B0AA7623A048240078965E /* PhotoViewController+Portrait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoViewController+Portrait.swift"; sourceTree = "<group>"; };
 		63B0AA7923A056090078965E /* PhotoViewController+Landscape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoViewController+Landscape.swift"; sourceTree = "<group>"; };
-		63E9491023A15679001CA74B /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
+		63E9491023A15679001CA74B /* InstagridStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagridStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				63982585239FEC470019DF2F /* PhotoViewController.swift */,
-				63B0AA7423A048100078965E /* PhotoViewController+View.swift */,
 				63B0AA7623A048240078965E /* PhotoViewController+Portrait.swift */,
 				63B0AA7923A056090078965E /* PhotoViewController+Landscape.swift */,
 			);
@@ -61,16 +64,27 @@
 			children = (
 				63AB9BA6239FE6D7003A22A4 /* AppDelegate.swift */,
 				63AB9BA8239FE6D7003A22A4 /* SceneDelegate.swift */,
+				630A6B1723A28294003BD368 /* LaunchScreen.storyboard */,
 				63AB9BB4239FE6DB003A22A4 /* Info.plist */,
 				63AB9BAF239FE6DB003A22A4 /* Assets.xcassets */,
+				630A6B1923A28FAE003BD368 /* Font */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		630A6B1923A28FAE003BD368 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				630A6B1A23A28FD0003BD368 /* Delm-Medium.otf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		633EF2EB23A1514000C611DF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				63E9491023A15679001CA74B /* SwipeView.swift */,
+				63E9491023A15679001CA74B /* InstagridStackView.swift */,
+				630A6B1C23A2AA39003BD368 /* SwipeStackView.swift */,
 				633EF2EC23A151A000C611DF /* PhotoView.swift */,
 			);
 			path = View;
@@ -170,6 +184,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				63AB9BB0239FE6DB003A22A4 /* Assets.xcassets in Resources */,
+				630A6B1823A28294003BD368 /* LaunchScreen.storyboard in Resources */,
+				630A6B1B23A28FD0003BD368 /* Delm-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,12 +198,12 @@
 			files = (
 				63B0AA7723A048240078965E /* PhotoViewController+Portrait.swift in Sources */,
 				63B0AA7A23A056090078965E /* PhotoViewController+Landscape.swift in Sources */,
-				63B0AA7523A048100078965E /* PhotoViewController+View.swift in Sources */,
 				63982586239FEC470019DF2F /* PhotoViewController.swift in Sources */,
 				63982589239FF9220019DF2F /* UIColor.swift in Sources */,
 				63AB9BA7239FE6D7003A22A4 /* AppDelegate.swift in Sources */,
-				63E9491123A1567A001CA74B /* SwipeView.swift in Sources */,
+				63E9491123A1567A001CA74B /* InstagridStackView.swift in Sources */,
 				63AB9BA9239FE6D7003A22A4 /* SceneDelegate.swift in Sources */,
+				630A6B1D23A2AA39003BD368 /* SwipeStackView.swift in Sources */,
 				633EF2ED23A151A000C611DF /* PhotoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

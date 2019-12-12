@@ -6,14 +6,23 @@
 //  Copyright © 2019 David Chea. All rights reserved.
 //
 
+import UIKit
+
 extension PhotoViewController {
     
     // MARK: - Method
     
-    func addPortraitConstraints() {
-        portraitConstraints.append(instagridImageView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.3))
-        portraitConstraints.append(instagridImageView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.1))
-        portraitConstraints.append(instagridImageView.centerXAnchor.constraint(equalToSystemSpacingAfter: view.safeAreaLayoutGuide.centerXAnchor, multiplier: 1))
-        portraitConstraints.append(instagridImageView.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 1))
+    func addPortraitConstraints(safeArea: UILayoutGuide) {
+        portraitConstraints.append(instagridImageView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.3))
+        portraitConstraints.append(instagridImageView.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.1))
+        portraitConstraints.append(instagridImageView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor))
+        portraitConstraints.append(instagridImageView.topAnchor.constraint(equalTo: safeArea.topAnchor))
+        
+        instagridStackView.axis = .vertical
+        portraitConstraints.append(instagridStackView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor))
+        portraitConstraints.append(instagridStackView.topAnchor.constraint(equalTo: instagridImageView.bottomAnchor))
+        
+        let swipeImageView = instagridStackView.swipeStackView.swipeImageView
+        portraitConstraints.append(swipeImageView.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.01))
     }
 }
