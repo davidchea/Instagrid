@@ -48,7 +48,10 @@
 		6308CE03239FE7C400BC0B0F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				63B0AA7823A048330078965E /* PhotoViewController */,
+				63982585239FEC470019DF2F /* PhotoViewController.swift */,
+				63B0AA7423A048100078965E /* PhotoViewController+View.swift */,
+				63B0AA7623A048240078965E /* PhotoViewController+Portrait.swift */,
+				63B0AA7923A056090078965E /* PhotoViewController+Landscape.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -106,17 +109,6 @@
 				6308CE04239FE7D100BC0B0F /* Support */,
 			);
 			path = Instagrid;
-			sourceTree = "<group>";
-		};
-		63B0AA7823A048330078965E /* PhotoViewController */ = {
-			isa = PBXGroup;
-			children = (
-				63982585239FEC470019DF2F /* PhotoViewController.swift */,
-				63B0AA7423A048100078965E /* PhotoViewController+View.swift */,
-				63B0AA7623A048240078965E /* PhotoViewController+Portrait.swift */,
-				63B0AA7923A056090078965E /* PhotoViewController+Landscape.swift */,
-			);
-			path = PhotoViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

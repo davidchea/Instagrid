@@ -8,42 +8,40 @@
 
 import UIKit
 
-class SwipeView: UIView {
+class SwipeView: UIStackView {
     
     // MARK: - Properties
-
-    lazy var arrowUpImageView: UIImageView = {
-        let arrowUpImageView = UIImageView(image: UIImage(named: "Arrow Up"))
-        arrowUpImageView.contentMode = .scaleAspectFit
-        arrowUpImageView.translatesAutoresizingMaskIntoConstraints = false
+    
+    let arrowImageView: UIImageView = {
+        let arrowImageView = UIImageView(image: nil)
+        arrowImageView.contentMode = .scaleAspectFit
+        arrowImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        return arrowUpImageView
+        return arrowImageView
     }()
     
-    let arrowLeftImageView: UIImageView = {
-        let arrowLeftImageView = UIImageView(image: UIImage(named: "Arrow Left"))
-        arrowLeftImageView.contentMode = .scaleAspectFit
-        arrowLeftImageView.translatesAutoresizingMaskIntoConstraints = false
+    let swipeLabel: UILabel = {
+        let swipeLabel = UILabel()
+        swipeLabel.font = UIFont(name: "Delm", size: 26)
+        swipeLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        return arrowLeftImageView
+        return swipeLabel
     }()
     
-    let swipeUpLabel: UILabel = {
-        let swipeUpLabel = UILabel()
-        swipeUpLabel.text = "Swipe up to share"
-        swipeUpLabel.font = UIFont(name: "Delm", size: 26)
-        swipeUpLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        return swipeUpLabel
-    }()
+    // MARK: - Initializers
     
-    let swipeLeftLabel: UILabel = {
-        let swipeUpLabel = UILabel()
-        swipeUpLabel.text = "Swipe left to share"
-        swipeUpLabel.font = UIFont(name: "Delm", size: 26)
-        swipeUpLabel.translatesAutoresizingMaskIntoConstraints = false
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
-        return swipeUpLabel
-    }()
-
+        addArrangedSubview(arrowImageView)
+    }
+    
+    
+    
+ 
+    
+    
+    required init(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

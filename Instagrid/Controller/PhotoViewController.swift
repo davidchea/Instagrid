@@ -20,8 +20,6 @@ class PhotoViewController: UIViewController {
         return instagridImageView
     }()
     
-    
-    
     var portraitConstraints = [NSLayoutConstraint]()
     var landscapeConstraints = [NSLayoutConstraint]()
     
