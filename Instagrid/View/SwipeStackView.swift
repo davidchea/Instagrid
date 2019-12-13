@@ -24,6 +24,7 @@ class SwipeStackView: UIStackView {
         let swipeLabel = UILabel()
         swipeLabel.font = UIFont(name: "Delm-Medium", size: 26)
         swipeLabel.textColor = .white
+        swipeLabel.textAlignment = .center
         swipeLabel.translatesAutoresizingMaskIntoConstraints = false
         
         return swipeLabel

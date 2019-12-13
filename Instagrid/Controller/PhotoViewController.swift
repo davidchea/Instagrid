@@ -43,12 +43,14 @@ class PhotoViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         if UIDevice.current.orientation.isPortrait {
+            instagridStackView.axis = .vertical
             instagridStackView.swipeStackView.swipeImageView.image = UIImage(named: "Arrow Up")
             instagridStackView.swipeStackView.swipeLabel.text = "Swipe up to share"
             
             NSLayoutConstraint.deactivate(landscapeConstraints)
             NSLayoutConstraint.activate(portraitConstraints)
         } else {
+            instagridStackView.axis = .horizontal
             instagridStackView.swipeStackView.swipeImageView.image = UIImage(named: "Arrow Left")
             instagridStackView.swipeStackView.swipeLabel.text = "Swipe left to share"
             
@@ -65,8 +67,7 @@ class PhotoViewController: UIViewController {
     }
     
     private func addConstraints() {
-        let safeArea = view.safeAreaLayoutGuide
-        addPortraitConstraints(safeArea: safeArea)
-        addLandscapeConstraints(safeArea: safeArea)
+        addPortraitConstraints()
+        addLandscapeConstraints()
     }
 }
