@@ -19,11 +19,18 @@ class InstagridStackView: UIStackView {
         return swipeStackView
     }()
     
-    let photoView: PhotoView = {
-        let photoView = PhotoView(frame: CGRect())
-        photoView.translatesAutoresizingMaskIntoConstraints = false
+    let mainImageView: MainImageView = {
+        let mainImageView = MainImageView(frame: CGRect())
+        mainImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        return photoView
+        return mainImageView
+    }()
+    
+    let layoutStackView: LayoutStackView = {
+        let layoutStackView = LayoutStackView(frame: CGRect())
+        layoutStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return layoutStackView
     }()
     
     // MARK: - Initializers
@@ -31,10 +38,7 @@ class InstagridStackView: UIStackView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        spacing = 50
-        
-        addArrangedSubview(swipeStackView)
-        addArrangedSubview(photoView)
+        addArrangedSubviews([swipeStackView, mainImageView, layoutStackView])
     }
     
     required init(coder: NSCoder) {

@@ -1,5 +1,5 @@
 //
-//  PhotoView.swift
+//  MainImageView.swift
 //  Instagrid
 //
 //  Created by David Chea on 11/12/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoView: UIView {
+class MainImageView: UIView {
     
     // MARK: - Properties
     
@@ -54,9 +54,7 @@ class PhotoView: UIView {
         super.init(frame: frame)
         
         backgroundColor = .photoBlue
-        
         addSubviews()
-        addConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -70,11 +68,5 @@ class PhotoView: UIView {
         addSubview(secondImageView)
         addSubview(thirdImageView)
         addSubview(fourthImageView)
-    }
-    
-    private func addConstraints() {
-        addFirstLayoutConstraints()
-        addSecondLayoutConstraints()
-        addThirdLayoutConstraints()
     }
 }

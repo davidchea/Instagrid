@@ -38,8 +38,7 @@ class SwipeStackView: UIStackView {
         axis = .vertical
         spacing = 10
         
-        addArrangedSubview(swipeImageView)
-        addArrangedSubview(swipeLabel)
+        addArrangedSubviews([swipeImageView, swipeLabel])
     }
     
     required init(coder: NSCoder) {
