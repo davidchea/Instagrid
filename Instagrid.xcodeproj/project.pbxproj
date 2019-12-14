@@ -19,6 +19,8 @@
 		63AB9BB0239FE6DB003A22A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63AB9BAF239FE6DB003A22A4 /* Assets.xcassets */; };
 		63AC0F9123A3993400B8E602 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63AC0F9023A3993400B8E602 /* Delm-Medium.otf */; };
 		63B0AA7723A048240078965E /* InstagridViewController+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B0AA7623A048240078965E /* InstagridViewController+Constraint.swift */; };
+		63C82B0523A51BD2001AD197 /* InstagridViewController+Portrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C82B0423A51BD2001AD197 /* InstagridViewController+Portrait.swift */; };
+		63C82B0723A51BFD001AD197 /* InstagridViewController+Landscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C82B0623A51BFD001AD197 /* InstagridViewController+Landscape.swift */; };
 		63E9491123A1567A001CA74B /* InstagridStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9491023A15679001CA74B /* InstagridStackView.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		63AB9BB4239FE6DB003A22A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63AC0F9023A3993400B8E602 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		63B0AA7623A048240078965E /* InstagridViewController+Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstagridViewController+Constraint.swift"; sourceTree = "<group>"; };
+		63C82B0423A51BD2001AD197 /* InstagridViewController+Portrait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstagridViewController+Portrait.swift"; sourceTree = "<group>"; };
+		63C82B0623A51BFD001AD197 /* InstagridViewController+Landscape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstagridViewController+Landscape.swift"; sourceTree = "<group>"; };
 		63E9491023A15679001CA74B /* InstagridStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagridStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +60,8 @@
 			children = (
 				63982585239FEC470019DF2F /* InstagridViewController.swift */,
 				63B0AA7623A048240078965E /* InstagridViewController+Constraint.swift */,
+				63C82B0423A51BD2001AD197 /* InstagridViewController+Portrait.swift */,
+				63C82B0623A51BFD001AD197 /* InstagridViewController+Landscape.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,12 +205,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63C82B0723A51BFD001AD197 /* InstagridViewController+Landscape.swift in Sources */,
 				63B0AA7723A048240078965E /* InstagridViewController+Constraint.swift in Sources */,
 				63982586239FEC470019DF2F /* InstagridViewController.swift in Sources */,
 				63982589239FF9220019DF2F /* UIColor.swift in Sources */,
 				63AB9BA7239FE6D7003A22A4 /* AppDelegate.swift in Sources */,
 				63E9491123A1567A001CA74B /* InstagridStackView.swift in Sources */,
 				63AB9BA9239FE6D7003A22A4 /* SceneDelegate.swift in Sources */,
+				63C82B0523A51BD2001AD197 /* InstagridViewController+Portrait.swift in Sources */,
 				636CC92023A3D2AE0046773B /* LayoutStackView.swift in Sources */,
 				630A6B1D23A2AA39003BD368 /* SwipeStackView.swift in Sources */,
 				633EF2ED23A151A000C611DF /* MainImageView.swift in Sources */,

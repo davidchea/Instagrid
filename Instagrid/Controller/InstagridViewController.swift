@@ -40,7 +40,7 @@ class InstagridViewController: UIViewController {
         addSubviews()
         
         setMainConstraints()
-        addConstraints()
+        addSpecificConstraints()
     }
     
     override func viewDidLayoutSubviews() {

@@ -15,40 +15,23 @@ extension InstagridViewController {
     func setMainConstraints() {
         let safeArea = view.safeAreaLayoutGuide
         
+        let mainImageView = instagridStackView.mainImageView
+        let mainImageViewHeightConstraint = mainImageView.heightAnchor.constraint(equalTo: mainImageView.widthAnchor)
+        mainImageViewHeightConstraint.priority = UILayoutPriority(999)
+        
         NSLayoutConstraint.activate([
             instagridImageView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.3),
             instagridImageView.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.1),
             instagridImageView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
-            instagridImageView.topAnchor.constraint(equalTo: safeArea.topAnchor),
             
             instagridStackView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
-            instagridStackView.topAnchor.constraint(equalTo: instagridImageView.bottomAnchor),
-            instagridStackView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -20)
+            
+            mainImageViewHeightConstraint
         ])
     }
     
-    func addConstraints() {
+    func addSpecificConstraints() {
         addPortraitConstraints()
         addLandscapeConstraints()
-    }
-    
-    func addPortraitConstraints() {
-        let safeArea = view.safeAreaLayoutGuide
-        
-        let swipeImageView = instagridStackView.swipeStackView.swipeImageView
-        portraitConstraints.append(swipeImageView.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.01))
-        
-        let mainImageView = instagridStackView.mainImageView
-        portraitConstraints.append(mainImageView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.8))
-    }
-    
-    func addLandscapeConstraints() {
-        let safeArea = view.safeAreaLayoutGuide
-       
-        let swipeImageView = instagridStackView.swipeStackView.swipeImageView
-        landscapeConstraints.append(swipeImageView.heightAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.01))
-        
-        let mainImageView = instagridStackView.mainImageView
-        landscapeConstraints.append(mainImageView.widthAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.8))
     }
 }
