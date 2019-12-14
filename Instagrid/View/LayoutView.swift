@@ -1,5 +1,5 @@
 //
-//  MainImageView.swift
+//  LayoutView.swift
 //  Instagrid
 //
 //  Created by David Chea on 11/12/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainImageView: UIView {
+class LayoutView: UIView {
     
     // MARK: - Properties
     
@@ -53,7 +53,7 @@ class MainImageView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .photoBlue
+        backgroundColor = .layoutBlue
         addSubviews()
     }
     
