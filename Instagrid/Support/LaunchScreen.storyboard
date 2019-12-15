@@ -15,18 +15,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="Ka9-j3-bex">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="rMw-1u-XiI">
                                 <rect key="frame" x="157" y="420" width="100" height="56"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Ka9-j3-bex" secondAttribute="height" multiplier="16:9" id="9bl-xL-gQw"/>
-                                    <constraint firstAttribute="width" constant="100" id="uhF-c0-6gQ"/>
+                                    <constraint firstAttribute="width" constant="100" id="a3Y-mQ-oop"/>
+                                    <constraint firstAttribute="width" secondItem="rMw-1u-XiI" secondAttribute="height" multiplier="16:9" id="uSl-rI-bKB"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.71764705882352942" green="0.84313725490196079" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ka9-j3-bex" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Ewk-qb-WNy"/>
-                            <constraint firstItem="Ka9-j3-bex" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="oj8-Cy-Vc6"/>
+                            <constraint firstItem="rMw-1u-XiI" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WcM-2Z-TRW"/>
+                            <constraint firstItem="rMw-1u-XiI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="yE1-gC-bRN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                     </view>

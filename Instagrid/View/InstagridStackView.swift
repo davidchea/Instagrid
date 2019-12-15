@@ -12,32 +12,21 @@ class InstagridStackView: UIStackView {
     
     // MARK: - Properties
     
-    let swipeStackView: SwipeStackView = {
-        let swipeStackView = SwipeStackView(frame: CGRect())
-        swipeStackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return swipeStackView
-    }()
+    @AutoLayout(view: SwipeStackView(frame: CGRect()))
+    var swipeStackView
     
-    let layoutView: LayoutView = {
-        let layoutView = LayoutView(frame: CGRect())
-        layoutView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return layoutView
-    }()
+    @AutoLayout(view: LayoutView(frame: CGRect()))
+    var layoutView
     
-    let layoutStackView: LayoutStackView = {
-        let layoutStackView = LayoutStackView(frame: CGRect())
-        layoutStackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return layoutStackView
-    }()
+    @AutoLayout(view: LayoutStackView(frame: CGRect()))
+    var layoutStackView
     
     // MARK: - Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        spacing = 30
         addArrangedSubviews([swipeStackView, layoutView, UIView(), layoutStackView])
     }
     

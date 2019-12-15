@@ -12,41 +12,21 @@ class LayoutView: UIView {
     
     // MARK: - Properties
     
-    let firstImageView: UIImageView = {
-        let firstImageView = UIImageView(image: UIImage(named: "Plus"))
-        firstImageView.contentMode = .scaleAspectFit
-        firstImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return firstImageView
-    }()
+    @AutoLayout(view: UIImageView(image: UIImage(named: "Plus")))
+    private var firstImageView
     
-    let secondImageView: UIImageView = {
-        let secondImageView = UIImageView(image: UIImage(named: "Plus"))
-        secondImageView.contentMode = .scaleAspectFit
-        secondImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return secondImageView
-    }()
+    @AutoLayout(view: UIImageView(image: UIImage(named: "Plus")))
+    private var secondImageView
+
+    @AutoLayout(view: UIImageView(image: UIImage(named: "Plus")))
+    private var thirdImageView
     
-    let thirdImageView: UIImageView = {
-        let thirdImageView = UIImageView(image: UIImage(named: "Plus"))
-        thirdImageView.contentMode = .scaleAspectFit
-        thirdImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return thirdImageView
-    }()
+    @AutoLayout(view: UIImageView(image: UIImage(named: "Plus")))
+    private var fourthImageView
     
-    let fourthImageView: UIImageView = {
-        let fourthImageView = UIImageView(image: UIImage(named: "Plus"))
-        fourthImageView.contentMode = .scaleAspectFit
-        fourthImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return fourthImageView
-    }()
-    
-    var firstLayoutConstraints = [NSLayoutConstraint]()
-    var secondLayoutConstraints = [NSLayoutConstraint]()
-    var thirdLayoutConstraints = [NSLayoutConstraint]()
+    private var firstLayoutConstraints = [NSLayoutConstraint]()
+    private var secondLayoutConstraints = [NSLayoutConstraint]()
+    private var thirdLayoutConstraints = [NSLayoutConstraint]()
     
     // MARK: - Initializers
 
@@ -54,19 +34,10 @@ class LayoutView: UIView {
         super.init(frame: frame)
         
         backgroundColor = .layoutBlue
-        addSubviews()
+        addSubviews([firstImageView, secondImageView, thirdImageView, fourthImageView])
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-    }
-    
-    // MARK: - Methods
-    
-    private func addSubviews() {
-        addSubview(firstImageView)
-        addSubview(secondImageView)
-        addSubview(thirdImageView)
-        addSubview(fourthImageView)
     }
 }

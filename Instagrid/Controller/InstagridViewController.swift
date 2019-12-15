@@ -12,20 +12,11 @@ class InstagridViewController: UIViewController {
     
     // MARK: - Properties
     
-    let instagridImageView: UIImageView = {
-        let instagridImageView = UIImageView(image: UIImage(named: "Instagrid"))
-        instagridImageView.contentMode = .scaleAspectFit
-        instagridImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return instagridImageView
-    }()
+    @AutoLayout(view: UIImageView(image: UIImage(named: "Instagrid")))
+    var instagridImageView
     
-    let instagridStackView: InstagridStackView = {
-        let instagridStackView = InstagridStackView(frame: CGRect())
-        instagridStackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return instagridStackView
-    }()
+    @AutoLayout(view: InstagridStackView(frame: CGRect()))
+    var instagridStackView
     
     var portraitConstraints = [NSLayoutConstraint]()
     var landscapeConstraints = [NSLayoutConstraint]()
@@ -36,11 +27,10 @@ class InstagridViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .backgroundBlue
+        view.addSubviews([instagridImageView, instagridStackView])
         
-        addSubviews()
-        
-        setMainConstraints()
-        addSpecificConstraints()
+        activateMainConstraints()
+        addOrientationConstraints()
     }
     
     override func viewDidLayoutSubviews() {
@@ -63,12 +53,5 @@ class InstagridViewController: UIViewController {
             NSLayoutConstraint.deactivate(portraitConstraints)
             NSLayoutConstraint.activate(landscapeConstraints)
         }
-    }
-    
-    // MARK: - Method
-    
-    private func addSubviews() {
-        view.addSubview(instagridImageView)
-        view.addSubview(instagridStackView)
     }
 }

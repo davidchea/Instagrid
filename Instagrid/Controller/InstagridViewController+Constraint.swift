@@ -12,23 +12,20 @@ extension InstagridViewController {
     
     // MARK: - Methods
     
-    func setMainConstraints() {
+    func activateMainConstraints() {
         let safeArea = view.safeAreaLayoutGuide
         
-        let layoutView = instagridStackView.layoutView
-        let layoutViewHeightConstraint = layoutView.heightAnchor.constraint(equalTo: layoutView.widthAnchor)
-        layoutViewHeightConstraint.priority = UILayoutPriority(999)
+        instagridImageView.widthAnchor.constraint(equalTo: instagridStackView.widthAnchor, multiplier: 0.3).isActive = true
+        instagridImageView.heightAnchor.constraint(equalTo: instagridStackView.heightAnchor, multiplier: 0.1).isActive = true
+        instagridImageView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor).isActive = true
         
-        NSLayoutConstraint.activate([
-            instagridImageView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.3),
-            instagridImageView.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.1),
-            instagridImageView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
-            
-            layoutViewHeightConstraint
-        ])
+        instagridStackView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -20).isActive = true
+        
+        let layoutView = instagridStackView.layoutView
+        layoutView.heightAnchor.constraint(equalTo: layoutView.widthAnchor).reducePriority().isActive = true
     }
     
-    func addSpecificConstraints() {
+    func addOrientationConstraints() {
         addPortraitConstraints()
         addLandscapeConstraints()
     }

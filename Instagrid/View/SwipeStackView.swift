@@ -11,24 +11,12 @@ import UIKit
 class SwipeStackView: UIStackView {
     
     // MARK: - Properties
-    
-    let swipeImageView: UIImageView = {
-        let swipeImageView = UIImageView(image: nil)
-        swipeImageView.contentMode = .scaleAspectFit
-        swipeImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        return swipeImageView
-    }()
+    @AutoLayout(view: UIImageView(image: nil))
+    var swipeImageView
     
-    let swipeLabel: UILabel = {
-        let swipeLabel = UILabel()
-        swipeLabel.font = UIFont(name: "Delm-Medium", size: 26)
-        swipeLabel.textColor = .white
-        swipeLabel.textAlignment = .center
-        swipeLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        return swipeLabel
-    }()
+    @AutoLayout(view: UILabel())
+    var swipeLabel
     
     // MARK: - Initializers
     

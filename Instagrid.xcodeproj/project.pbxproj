@@ -19,6 +19,9 @@
 		63AB9BB0239FE6DB003A22A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63AB9BAF239FE6DB003A22A4 /* Assets.xcassets */; };
 		63AC0F9123A3993400B8E602 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63AC0F9023A3993400B8E602 /* Delm-Medium.otf */; };
 		63B0AA7723A048240078965E /* InstagridViewController+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B0AA7623A048240078965E /* InstagridViewController+Constraint.swift */; };
+		63C37D9C23A680D800E2B7F6 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C37D9B23A680D800E2B7F6 /* NSLayoutConstraint.swift */; };
+		63C37D9F23A687DD00E2B7F6 /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C37D9E23A687DD00E2B7F6 /* AutoLayout.swift */; };
+		63C37DA723A6EA4F00E2B7F6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C37DA623A6EA4F00E2B7F6 /* UIView.swift */; };
 		63C82B0523A51BD2001AD197 /* InstagridViewController+Portrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C82B0423A51BD2001AD197 /* InstagridViewController+Portrait.swift */; };
 		63C82B0723A51BFD001AD197 /* InstagridViewController+Landscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C82B0623A51BFD001AD197 /* InstagridViewController+Landscape.swift */; };
 		63E9491123A1567A001CA74B /* InstagridStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9491023A15679001CA74B /* InstagridStackView.swift */; };
@@ -39,6 +42,9 @@
 		63AB9BB4239FE6DB003A22A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63AC0F9023A3993400B8E602 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		63B0AA7623A048240078965E /* InstagridViewController+Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstagridViewController+Constraint.swift"; sourceTree = "<group>"; };
+		63C37D9B23A680D800E2B7F6 /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
+		63C37D9E23A687DD00E2B7F6 /* AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
+		63C37DA623A6EA4F00E2B7F6 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		63C82B0423A51BD2001AD197 /* InstagridViewController+Portrait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstagridViewController+Portrait.swift"; sourceTree = "<group>"; };
 		63C82B0623A51BFD001AD197 /* InstagridViewController+Landscape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstagridViewController+Landscape.swift"; sourceTree = "<group>"; };
 		63E9491023A15679001CA74B /* InstagridStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagridStackView.swift; sourceTree = "<group>"; };
@@ -101,8 +107,10 @@
 		63982587239FF8700019DF2F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				63C37DA623A6EA4F00E2B7F6 /* UIView.swift */,
 				636CC92123A3D6570046773B /* UIStackView.swift */,
 				63982588239FF9220019DF2F /* UIColor.swift */,
+				63C37D9B23A680D800E2B7F6 /* NSLayoutConstraint.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -129,9 +137,18 @@
 				633EF2EB23A1514000C611DF /* View */,
 				6308CE03239FE7C400BC0B0F /* Controller */,
 				63982587239FF8700019DF2F /* Extension */,
+				63C37D9D23A6876D00E2B7F6 /* Property Wrapper */,
 				6308CE04239FE7D100BC0B0F /* Support */,
 			);
 			path = Instagrid;
+			sourceTree = "<group>";
+		};
+		63C37D9D23A6876D00E2B7F6 /* Property Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				63C37D9E23A687DD00E2B7F6 /* AutoLayout.swift */,
+			);
+			path = "Property Wrapper";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,11 +225,14 @@
 				63C82B0723A51BFD001AD197 /* InstagridViewController+Landscape.swift in Sources */,
 				63B0AA7723A048240078965E /* InstagridViewController+Constraint.swift in Sources */,
 				63982586239FEC470019DF2F /* InstagridViewController.swift in Sources */,
+				63C37D9C23A680D800E2B7F6 /* NSLayoutConstraint.swift in Sources */,
 				63982589239FF9220019DF2F /* UIColor.swift in Sources */,
 				63AB9BA7239FE6D7003A22A4 /* AppDelegate.swift in Sources */,
 				63E9491123A1567A001CA74B /* InstagridStackView.swift in Sources */,
 				63AB9BA9239FE6D7003A22A4 /* SceneDelegate.swift in Sources */,
+				63C37D9F23A687DD00E2B7F6 /* AutoLayout.swift in Sources */,
 				63C82B0523A51BD2001AD197 /* InstagridViewController+Portrait.swift in Sources */,
+				63C37DA723A6EA4F00E2B7F6 /* UIView.swift in Sources */,
 				636CC92023A3D2AE0046773B /* LayoutStackView.swift in Sources */,
 				630A6B1D23A2AA39003BD368 /* SwipeStackView.swift in Sources */,
 				633EF2ED23A151A000C611DF /* LayoutView.swift in Sources */,

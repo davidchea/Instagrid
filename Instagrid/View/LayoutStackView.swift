@@ -12,29 +12,14 @@ class LayoutStackView: UIStackView {
     
     // MARK: - Properties
     
-    let firstLayoutImageView: UIImageView = {
-        let firstLayoutImageView = UIImageView(image: UIImage(named: "Layout 1"))
-        firstLayoutImageView.contentMode = .scaleAspectFit
-        firstLayoutImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return firstLayoutImageView
-    }()
+    @AutoLayout(view: UIImageView(image: UIImage(named: "Layout 1")))
+    private var firstLayoutImageView
     
-    let secondLayoutImageView: UIImageView = {
-        let secondLayoutImageView = UIImageView(image: UIImage(named: "Layout 2"))
-        secondLayoutImageView.contentMode = .scaleAspectFit
-        secondLayoutImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return secondLayoutImageView
-    }()
+    @AutoLayout(view: UIImageView(image: UIImage(named: "Layout 2")))
+    private var secondLayoutImageView
     
-    let thirdLayoutImageView: UIImageView = {
-        let thirdLayoutImageView = UIImageView(image: UIImage(named: "Layout 3"))
-        thirdLayoutImageView.contentMode = .scaleAspectFit
-        thirdLayoutImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return thirdLayoutImageView
-    }()
+    @AutoLayout(view: UIImageView(image: UIImage(named: "Layout 3")))
+    private var thirdLayoutImageView
     
     // MARK: - Initializers
     
