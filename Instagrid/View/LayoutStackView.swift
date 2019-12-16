@@ -13,20 +13,20 @@ class LayoutStackView: UIStackView {
     // MARK: - Properties
     
     @AutoLayout(view: UIImageView(image: UIImage(named: "Layout 1")))
-    private var firstLayoutImageView
+    var firstLayoutImageView
     
     @AutoLayout(view: UIImageView(image: UIImage(named: "Layout 2")))
-    private var secondLayoutImageView
+    var secondLayoutImageView
     
     @AutoLayout(view: UIImageView(image: UIImage(named: "Layout 3")))
-    private var thirdLayoutImageView
+    var thirdLayoutImageView
     
     // MARK: - Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        distribution = .fillEqually
+        spacing = 30
         addArrangedSubviews([firstLayoutImageView, secondLayoutImageView, thirdLayoutImageView])
     }
     

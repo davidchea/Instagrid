@@ -26,7 +26,9 @@ class InstagridStackView: UIStackView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        spacing = 30
+        alignment = .center
+        spacing = 20
+        
         addArrangedSubviews([swipeStackView, layoutView, UIView(), layoutStackView])
     }
     

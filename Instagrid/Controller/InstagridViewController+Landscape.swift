@@ -20,18 +20,9 @@ extension InstagridViewController {
         landscapeConstraints.append(instagridStackView.topAnchor.constraint(equalTo: instagridImageView.bottomAnchor, constant: 20))
         landscapeConstraints.append(instagridStackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor))
         landscapeConstraints.append(instagridStackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).reducePriority())
-        
-        let swipeImageView = instagridStackView.swipeStackView.swipeImageView
-        landscapeConstraints.append(swipeImageView.heightAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.01))
-        
-        let swipeStackViewEmptyView = instagridStackView.swipeStackView.arrangedSubviews.first!
-        landscapeConstraints.append(swipeStackViewEmptyView.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.3))
        
         let layoutView = instagridStackView.layoutView
         landscapeConstraints.append(layoutView.widthAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.8))
         landscapeConstraints.append(layoutView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor).reducePriority())
-        
-        let layoutStackView = instagridStackView.layoutStackView
-        landscapeConstraints.append(layoutStackView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.1).reducePriority())
     }
 }

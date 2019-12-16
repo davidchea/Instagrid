@@ -34,21 +34,26 @@ class InstagridViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
+        let layoutStackView = instagridStackView.layoutStackView
+        
+        let swipeImageView = instagridStackView.swipeStackView.swipeImageView
+        let swipeLabel = instagridStackView.swipeStackView.swipeLabel
+        
         if UIDevice.current.orientation.isPortrait {
             instagridStackView.axis = .vertical
-            instagridStackView.layoutStackView.axis = .horizontal
+            layoutStackView.axis = .horizontal
             
-            instagridStackView.swipeStackView.swipeImageView.image = UIImage(named: "Arrow Up")
-            instagridStackView.swipeStackView.swipeLabel.text = "Swipe up to share"
+            swipeImageView.image = UIImage(named: "Arrow Up")
+            swipeLabel.text = "Swipe up to share"
             
             NSLayoutConstraint.deactivate(landscapeConstraints)
             NSLayoutConstraint.activate(portraitConstraints)
         } else {
             instagridStackView.axis = .horizontal
-            instagridStackView.layoutStackView.axis = .vertical
+            layoutStackView.axis = .vertical
             
-            instagridStackView.swipeStackView.swipeImageView.image = UIImage(named: "Arrow Left")
-            instagridStackView.swipeStackView.swipeLabel.text = "Swipe left to share"
+            swipeImageView.image = UIImage(named: "Arrow Left")
+            swipeLabel.text = "Swipe left to share"
             
             NSLayoutConstraint.deactivate(portraitConstraints)
             NSLayoutConstraint.activate(landscapeConstraints)

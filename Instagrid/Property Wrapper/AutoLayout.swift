@@ -27,7 +27,6 @@ struct AutoLayout<T: UIView> {
         else if let label = wrappedValue as? UILabel {
             label.font = UIFont(name: "Delm-Medium", size: 26)
             label.textColor = .white
-            label.textAlignment = .center
         }
     }
 }
