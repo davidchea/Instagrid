@@ -13,30 +13,33 @@ extension InstagridViewController {
     // MARK: - Methods
     
     func activateMainConstraints() {
-        let safeArea = view.safeAreaLayoutGuide
+        fillSafeArea()
         
-        instagridImageView.widthAnchor.constraint(equalTo: instagridStackView.widthAnchor, multiplier: 0.3).isActive = true
-        instagridImageView.heightAnchor.constraint(equalTo: instagridStackView.heightAnchor, multiplier: 0.1).isActive = true
-        instagridImageView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor).isActive = true
+        let swipeImageView = instagridStackView.gridStackView.swipeStackView.swipeImageView
+        swipeImageView.widthAnchor.constraint(equalTo: instagridStackView.widthAnchor, multiplier: 0.03).isActive = true
+        swipeImageView.heightAnchor.constraint(equalTo: instagridStackView.heightAnchor, multiplier: 0.03).isActive = true
         
-        instagridStackView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -20).isActive = true
-        
-        let swipeImageView = instagridStackView.swipeStackView.swipeImageView
-        swipeImageView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.03).isActive = true
-        swipeImageView.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.03).isActive = true
-        
-        let layoutView = instagridStackView.layoutView
-        layoutView.heightAnchor.constraint(equalTo: layoutView.widthAnchor).reducePriority().isActive = true
+        let gridView = instagridStackView.gridStackView.gridView
+        gridView.heightAnchor.constraint(equalTo: gridView.widthAnchor).reducePriority().isActive = true
         
         let layoutImageViews = [
-            instagridStackView.layoutStackView.firstLayoutImageView,
-            instagridStackView.layoutStackView.secondLayoutImageView,
-            instagridStackView.layoutStackView.thirdLayoutImageView
+            instagridStackView.gridStackView.layoutStackView.firstLayoutImageView,
+            instagridStackView.gridStackView.layoutStackView.secondLayoutImageView,
+            instagridStackView.gridStackView.layoutStackView.thirdLayoutImageView
         ]
         layoutImageViews.forEach {
-            $0.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.2).isActive = true
-            $0.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.2).isActive = true
+            $0.widthAnchor.constraint(equalTo: instagridStackView.widthAnchor, multiplier: 0.2).reducePriority().isActive = true
+            $0.heightAnchor.constraint(equalTo: instagridStackView.heightAnchor, multiplier: 0.2).isActive = true
         }
+    }
+    
+    private func fillSafeArea() {
+        NSLayoutConstraint.activate([
+            instagridStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            instagridStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            instagridStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            instagridStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
+        ])
     }
     
     func addOrientationConstraints() {

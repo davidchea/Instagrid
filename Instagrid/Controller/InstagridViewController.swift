@@ -12,9 +12,6 @@ class InstagridViewController: UIViewController {
     
     // MARK: - Properties
     
-    @AutoLayout(view: UIImageView(image: UIImage(named: "Instagrid")))
-    var instagridImageView
-    
     @AutoLayout(view: InstagridStackView(frame: CGRect()))
     var instagridStackView
     
@@ -27,7 +24,7 @@ class InstagridViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .backgroundBlue
-        view.addSubviews([instagridImageView, instagridStackView])
+        view.addSubview(instagridStackView)
         
         activateMainConstraints()
         addOrientationConstraints()

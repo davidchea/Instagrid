@@ -2,7 +2,7 @@
 //  InstagridStackView.swift
 //  Instagrid
 //
-//  Created by David Chea on 11/12/2019.
+//  Created by David Chea on 16/12/2019.
 //  Copyright © 2019 David Chea. All rights reserved.
 //
 
@@ -12,24 +12,21 @@ class InstagridStackView: UIStackView {
     
     // MARK: - Properties
     
-    @AutoLayout(view: SwipeStackView(frame: CGRect()))
-    var swipeStackView
+    @AutoLayout(view: UIImageView(image: UIImage(named: "Instagrid")))
+    var instagridImageView
     
-    @AutoLayout(view: GridView(frame: CGRect()))
-    var layoutView
-    
-    @AutoLayout(view: LayoutStackView(frame: CGRect()))
-    var layoutStackView
+    @AutoLayout(view: GridStackView(frame: CGRect()))
+    var gridStackView
     
     // MARK: - Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        axis = .vertical
         alignment = .center
-        distribution = .equalCentering
         
-        addArrangedSubviews([swipeStackView, layoutView, layoutStackView])
+        addArrangedSubviews([instagridImageView, gridStackView])
     }
     
     required init(coder: NSCoder) {

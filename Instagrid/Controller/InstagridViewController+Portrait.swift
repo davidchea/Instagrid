@@ -13,23 +13,22 @@ extension InstagridViewController {
     // MARK: - Methods
     
     func addPortraitConstraints() {
-        let safeArea = view.safeAreaLayoutGuide
+        let instagridImageView = instagridStackView.instagridImageView
+        portraitConstraints.append(instagridImageView.widthAnchor.constraint(equalTo: instagridStackView.widthAnchor, multiplier: 0.3))
+        portraitConstraints.append(instagridImageView.heightAnchor.constraint(equalTo: instagridStackView.heightAnchor, multiplier: 0.1))
         
-        portraitConstraints.append(instagridImageView.topAnchor.constraint(equalTo: safeArea.topAnchor))
-        
-        portraitConstraints.append(instagridStackView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor))
-        portraitConstraints.append(instagridStackView.topAnchor.constraint(equalTo: instagridImageView.bottomAnchor, constant: 100))
-        
-        let layoutView = instagridStackView.layoutView
-        portraitConstraints.append(layoutView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.8))
+        let gridView = instagridStackView.gridStackView.gridView
+        portraitConstraints.append(gridView.widthAnchor.constraint(equalTo: instagridStackView.widthAnchor, multiplier: 0.8))
     }
     
     func activatePortraitConstraints() {
-        instagridStackView.axis = .vertical
-        instagridStackView.layoutStackView.axis = .horizontal
+        instagridStackView.gridStackView.axis = .vertical
+        instagridStackView.gridStackView.layoutStackView.axis = .horizontal
         
-        instagridStackView.swipeStackView.swipeImageView.image = UIImage(named: "Arrow Up")
-        instagridStackView.swipeStackView.swipeLabel.text = "Swipe up to share"
+        instagridStackView.spacing = 100
+        
+        instagridStackView.gridStackView.swipeStackView.swipeImageView.image = UIImage(named: "Arrow Up")
+        instagridStackView.gridStackView.swipeStackView.swipeLabel.text = "Swipe up to share"
         
         NSLayoutConstraint.deactivate(landscapeConstraints)
         NSLayoutConstraint.activate(portraitConstraints)

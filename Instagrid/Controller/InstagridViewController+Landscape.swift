@@ -13,25 +13,26 @@ extension InstagridViewController {
     // MARK: - Methods
     
     func addLandscapeConstraints() {
-        let safeArea = view.safeAreaLayoutGuide
+        let instagridImageView = instagridStackView.instagridImageView
+        landscapeConstraints.append(instagridImageView.widthAnchor.constraint(equalTo: instagridStackView.heightAnchor, multiplier: 0.3))
+        landscapeConstraints.append(instagridImageView.heightAnchor.constraint(equalTo: instagridStackView.widthAnchor, multiplier: 0.07))
         
-        landscapeConstraints.append(instagridImageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 10))
-        
-        landscapeConstraints.append(instagridStackView.topAnchor.constraint(equalTo: instagridImageView.bottomAnchor, constant: 20))
-        landscapeConstraints.append(instagridStackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor))
-        landscapeConstraints.append(instagridStackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).reducePriority())
+        let gridStackView = instagridStackView.gridStackView
+        landscapeConstraints.append(gridStackView.leadingAnchor.constraint(equalTo: instagridStackView.leadingAnchor))
+        landscapeConstraints.append(gridStackView.trailingAnchor.constraint(equalTo: instagridStackView.trailingAnchor))
        
-        let layoutView = instagridStackView.layoutView
-        landscapeConstraints.append(layoutView.widthAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.8))
-        landscapeConstraints.append(layoutView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor).reducePriority())
+        let gridView = gridStackView.gridView
+        landscapeConstraints.append(gridView.widthAnchor.constraint(equalTo: instagridStackView.heightAnchor, multiplier: 0.8))
     }
     
     func activateLandscapeConstraints() {
-        instagridStackView.axis = .horizontal
-        instagridStackView.layoutStackView.axis = .vertical
+        instagridStackView.gridStackView.axis = .horizontal
+        instagridStackView.gridStackView.layoutStackView.axis = .vertical
         
-        instagridStackView.swipeStackView.swipeImageView.image = UIImage(named: "Arrow Left")
-        instagridStackView.swipeStackView.swipeLabel.text = "Swipe left to share"
+        instagridStackView.spacing = .zero
+        
+        instagridStackView.gridStackView.swipeStackView.swipeImageView.image = UIImage(named: "Arrow Left")
+        instagridStackView.gridStackView.swipeStackView.swipeLabel.text = "Swipe left to share"
         
         NSLayoutConstraint.deactivate(portraitConstraints)
         NSLayoutConstraint.activate(landscapeConstraints)

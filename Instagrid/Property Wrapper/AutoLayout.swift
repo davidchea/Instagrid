@@ -18,7 +18,7 @@ struct AutoLayout<T: UIView> {
     // MARK: - Initializer
     
     init(view: T) {
-        self.wrappedValue = view
+        wrappedValue = view
         wrappedValue.translatesAutoresizingMaskIntoConstraints = false
         
         if let imageView = wrappedValue as? UIImageView {
