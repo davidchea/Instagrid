@@ -34,29 +34,10 @@ class InstagridViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        let layoutStackView = instagridStackView.layoutStackView
-        
-        let swipeImageView = instagridStackView.swipeStackView.swipeImageView
-        let swipeLabel = instagridStackView.swipeStackView.swipeLabel
-        
         if UIDevice.current.orientation.isPortrait {
-            instagridStackView.axis = .vertical
-            layoutStackView.axis = .horizontal
-            
-            swipeImageView.image = UIImage(named: "Arrow Up")
-            swipeLabel.text = "Swipe up to share"
-            
-            NSLayoutConstraint.deactivate(landscapeConstraints)
-            NSLayoutConstraint.activate(portraitConstraints)
+            activatePortraitConstraints()
         } else {
-            instagridStackView.axis = .horizontal
-            layoutStackView.axis = .vertical
-            
-            swipeImageView.image = UIImage(named: "Arrow Left")
-            swipeLabel.text = "Swipe left to share"
-            
-            NSLayoutConstraint.deactivate(portraitConstraints)
-            NSLayoutConstraint.activate(landscapeConstraints)
+            activateLandscapeConstraints()
         }
     }
 }

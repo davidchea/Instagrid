@@ -10,7 +10,7 @@ import UIKit
 
 extension InstagridViewController {
     
-    // MARK: - Method
+    // MARK: - Methods
     
     func addPortraitConstraints() {
         let safeArea = view.safeAreaLayoutGuide
@@ -22,5 +22,16 @@ extension InstagridViewController {
         
         let layoutView = instagridStackView.layoutView
         portraitConstraints.append(layoutView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.8))
+    }
+    
+    func activatePortraitConstraints() {
+        instagridStackView.axis = .vertical
+        instagridStackView.layoutStackView.axis = .horizontal
+        
+        instagridStackView.swipeStackView.swipeImageView.image = UIImage(named: "Arrow Up")
+        instagridStackView.swipeStackView.swipeLabel.text = "Swipe up to share"
+        
+        NSLayoutConstraint.deactivate(landscapeConstraints)
+        NSLayoutConstraint.activate(portraitConstraints)
     }
 }
