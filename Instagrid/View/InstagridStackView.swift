@@ -15,7 +15,7 @@ class InstagridStackView: UIStackView {
     @AutoLayout(view: SwipeStackView(frame: CGRect()))
     var swipeStackView
     
-    @AutoLayout(view: LayoutView(frame: CGRect()))
+    @AutoLayout(view: GridView(frame: CGRect()))
     var layoutView
     
     @AutoLayout(view: LayoutStackView(frame: CGRect()))

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		630A6B1823A28294003BD368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630A6B1723A28294003BD368 /* LaunchScreen.storyboard */; };
 		630A6B1D23A2AA39003BD368 /* SwipeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630A6B1C23A2AA39003BD368 /* SwipeStackView.swift */; };
-		633EF2ED23A151A000C611DF /* LayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633EF2EC23A151A000C611DF /* LayoutView.swift */; };
+		633EF2ED23A151A000C611DF /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633EF2EC23A151A000C611DF /* GridView.swift */; };
 		636CC92023A3D2AE0046773B /* LayoutStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636CC91F23A3D2AE0046773B /* LayoutStackView.swift */; };
 		636CC92223A3D6570046773B /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636CC92123A3D6570046773B /* UIStackView.swift */; };
 		63982586239FEC470019DF2F /* InstagridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63982585239FEC470019DF2F /* InstagridViewController.swift */; };
@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		630A6B1723A28294003BD368 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		630A6B1C23A2AA39003BD368 /* SwipeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeStackView.swift; sourceTree = "<group>"; };
-		633EF2EC23A151A000C611DF /* LayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutView.swift; sourceTree = "<group>"; };
+		633EF2EC23A151A000C611DF /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		636CC91F23A3D2AE0046773B /* LayoutStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutStackView.swift; sourceTree = "<group>"; };
 		636CC92123A3D6570046773B /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		63982585239FEC470019DF2F /* InstagridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagridViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			children = (
 				63E9491023A15679001CA74B /* InstagridStackView.swift */,
 				630A6B1C23A2AA39003BD368 /* SwipeStackView.swift */,
-				633EF2EC23A151A000C611DF /* LayoutView.swift */,
+				633EF2EC23A151A000C611DF /* GridView.swift */,
 				636CC91F23A3D2AE0046773B /* LayoutStackView.swift */,
 			);
 			path = View;
@@ -235,7 +235,7 @@
 				63C37DA723A6EA4F00E2B7F6 /* UIView.swift in Sources */,
 				636CC92023A3D2AE0046773B /* LayoutStackView.swift in Sources */,
 				630A6B1D23A2AA39003BD368 /* SwipeStackView.swift in Sources */,
-				633EF2ED23A151A000C611DF /* LayoutView.swift in Sources */,
+				633EF2ED23A151A000C611DF /* GridView.swift in Sources */,
 				636CC92223A3D6570046773B /* UIStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
