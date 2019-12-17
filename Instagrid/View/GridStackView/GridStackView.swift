@@ -29,7 +29,7 @@ class GridStackView: UIStackView {
         alignment = .center
         distribution = .equalSpacing
         
-        addArrangedSubviews([swipeStackView, gridView, layoutStackView])
+        [swipeStackView, gridView, layoutStackView].forEach { addArrangedSubview($0) }
     }
     
     required init(coder: NSCoder) {

@@ -15,7 +15,7 @@ class LayoutStackView: UIStackView {
     @AutoLayout(view: UIImageView(image: UIImage(named: "Layout 1")))
     var firstLayoutImageView
     
-    @AutoLayout(view: UIImageView(image: UIImage(named: "Layout 2")))
+    @AutoLayout(view: UIImageView(image: UIImage(named: "Selected Layout 2")))
     var secondLayoutImageView
     
     @AutoLayout(view: UIImageView(image: UIImage(named: "Layout 3")))
@@ -27,10 +27,38 @@ class LayoutStackView: UIStackView {
         super.init(frame: frame)
         
         spacing = 30
-        addArrangedSubviews([firstLayoutImageView, secondLayoutImageView, thirdLayoutImageView])
+        [firstLayoutImageView, secondLayoutImageView, thirdLayoutImageView].forEach { addArrangedSubview($0) }
+        
+        addGestureRecognizer()
     }
     
     required init(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    // MARK: - Methods
+    
+    private func addGestureRecognizer() {
+        firstLayoutImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(firstLayoutTapped)))
+        secondLayoutImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(secondLayoutTapped)))
+        thirdLayoutImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(thirdLayoutTapped)))
+    }
+    
+    @objc private func firstLayoutTapped() {
+        firstLayoutImageView.image = UIImage(named: "Selected Layout 1")
+        secondLayoutImageView.image = UIImage(named: "Layout 2")
+        thirdLayoutImageView.image = UIImage(named: "Layout 3")
+    }
+    
+    @objc private func secondLayoutTapped() {
+        firstLayoutImageView.image = UIImage(named: "Layout 1")
+        secondLayoutImageView.image = UIImage(named: "Selected Layout 2")
+        thirdLayoutImageView.image = UIImage(named: "Layout 3")
+    }
+    
+    @objc private func thirdLayoutTapped() {
+        firstLayoutImageView.image = UIImage(named: "Layout 1")
+        secondLayoutImageView.image = UIImage(named: "Layout 2")
+        thirdLayoutImageView.image = UIImage(named: "Selected Layout 3")
     }
 }

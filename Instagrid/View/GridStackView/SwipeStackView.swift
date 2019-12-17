@@ -27,7 +27,7 @@ class SwipeStackView: UIStackView {
         alignment = .center
         spacing = 10
         
-        addArrangedSubviews([swipeImageView, swipeLabel])
+        [swipeImageView, swipeLabel].forEach { addArrangedSubview($0) }
     }
     
     required init(coder: NSCoder) {

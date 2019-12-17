@@ -26,7 +26,7 @@ class InstagridStackView: UIStackView {
         axis = .vertical
         alignment = .center
         
-        addArrangedSubviews([instagridImageView, gridStackView])
+        [instagridImageView, gridStackView].forEach { addArrangedSubview($0) }
     }
     
     required init(coder: NSCoder) {

@@ -34,7 +34,7 @@ class GridView: UIView {
         super.init(frame: frame)
         
         backgroundColor = .layoutBlue
-        addSubviews([firstImageView, secondImageView, thirdImageView, fourthImageView])
+        [firstImageView, secondImageView, thirdImageView, fourthImageView].forEach { addSubview($0) }
     }
     
     required init?(coder: NSCoder) {

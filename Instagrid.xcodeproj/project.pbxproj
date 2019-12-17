@@ -11,7 +11,6 @@
 		630A6B1D23A2AA39003BD368 /* SwipeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630A6B1C23A2AA39003BD368 /* SwipeStackView.swift */; };
 		633EF2ED23A151A000C611DF /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633EF2EC23A151A000C611DF /* GridView.swift */; };
 		636CC92023A3D2AE0046773B /* LayoutStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636CC91F23A3D2AE0046773B /* LayoutStackView.swift */; };
-		636CC92223A3D6570046773B /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636CC92123A3D6570046773B /* UIStackView.swift */; };
 		63982586239FEC470019DF2F /* InstagridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63982585239FEC470019DF2F /* InstagridViewController.swift */; };
 		63982589239FF9220019DF2F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63982588239FF9220019DF2F /* UIColor.swift */; };
 		63AAEA6323A7E91900F6770F /* InstagridStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AAEA6223A7E91900F6770F /* InstagridStackView.swift */; };
@@ -22,9 +21,9 @@
 		63B0AA7723A048240078965E /* InstagridViewController+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B0AA7623A048240078965E /* InstagridViewController+Constraint.swift */; };
 		63C37D9C23A680D800E2B7F6 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C37D9B23A680D800E2B7F6 /* NSLayoutConstraint.swift */; };
 		63C37D9F23A687DD00E2B7F6 /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C37D9E23A687DD00E2B7F6 /* AutoLayout.swift */; };
-		63C37DA723A6EA4F00E2B7F6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C37DA623A6EA4F00E2B7F6 /* UIView.swift */; };
 		63C82B0523A51BD2001AD197 /* InstagridViewController+Portrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C82B0423A51BD2001AD197 /* InstagridViewController+Portrait.swift */; };
 		63C82B0723A51BFD001AD197 /* InstagridViewController+Landscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C82B0623A51BFD001AD197 /* InstagridViewController+Landscape.swift */; };
+		63E5517123A921B0006D0B84 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E5517023A921B0006D0B84 /* UIViewController.swift */; };
 		63E9491123A1567A001CA74B /* GridStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9491023A15679001CA74B /* GridStackView.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +32,6 @@
 		630A6B1C23A2AA39003BD368 /* SwipeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeStackView.swift; sourceTree = "<group>"; };
 		633EF2EC23A151A000C611DF /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		636CC91F23A3D2AE0046773B /* LayoutStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutStackView.swift; sourceTree = "<group>"; };
-		636CC92123A3D6570046773B /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		63982585239FEC470019DF2F /* InstagridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagridViewController.swift; sourceTree = "<group>"; };
 		63982588239FF9220019DF2F /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		63AAEA6223A7E91900F6770F /* InstagridStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagridStackView.swift; sourceTree = "<group>"; };
@@ -46,9 +44,9 @@
 		63B0AA7623A048240078965E /* InstagridViewController+Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstagridViewController+Constraint.swift"; sourceTree = "<group>"; };
 		63C37D9B23A680D800E2B7F6 /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
 		63C37D9E23A687DD00E2B7F6 /* AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
-		63C37DA623A6EA4F00E2B7F6 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		63C82B0423A51BD2001AD197 /* InstagridViewController+Portrait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstagridViewController+Portrait.swift"; sourceTree = "<group>"; };
 		63C82B0623A51BFD001AD197 /* InstagridViewController+Landscape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstagridViewController+Landscape.swift"; sourceTree = "<group>"; };
+		63E5517023A921B0006D0B84 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		63E9491023A15679001CA74B /* GridStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,8 +105,7 @@
 		63982587239FF8700019DF2F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				63C37DA623A6EA4F00E2B7F6 /* UIView.swift */,
-				636CC92123A3D6570046773B /* UIStackView.swift */,
+				63E5517023A921B0006D0B84 /* UIViewController.swift */,
 				63982588239FF9220019DF2F /* UIColor.swift */,
 				63C37D9B23A680D800E2B7F6 /* NSLayoutConstraint.swift */,
 			);
@@ -244,11 +241,10 @@
 				63AB9BA9239FE6D7003A22A4 /* SceneDelegate.swift in Sources */,
 				63C37D9F23A687DD00E2B7F6 /* AutoLayout.swift in Sources */,
 				63C82B0523A51BD2001AD197 /* InstagridViewController+Portrait.swift in Sources */,
-				63C37DA723A6EA4F00E2B7F6 /* UIView.swift in Sources */,
 				636CC92023A3D2AE0046773B /* LayoutStackView.swift in Sources */,
 				630A6B1D23A2AA39003BD368 /* SwipeStackView.swift in Sources */,
+				63E5517123A921B0006D0B84 /* UIViewController.swift in Sources */,
 				633EF2ED23A151A000C611DF /* GridView.swift in Sources */,
-				636CC92223A3D6570046773B /* UIStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

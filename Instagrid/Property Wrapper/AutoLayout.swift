@@ -1,5 +1,5 @@
 //
-//  Properties.swift
+//  AutoLayout.swift
 //  Instagrid
 //
 //  Created by David Chea on 15/12/2019.
@@ -23,6 +23,7 @@ struct AutoLayout<T: UIView> {
         
         if let imageView = wrappedValue as? UIImageView {
             imageView.contentMode = .scaleAspectFit
+            imageView.isUserInteractionEnabled = true
         }
         else if let label = wrappedValue as? UILabel {
             label.font = UIFont(name: "Delm-Medium", size: 26)

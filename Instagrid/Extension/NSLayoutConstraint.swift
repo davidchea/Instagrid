@@ -13,7 +13,7 @@ extension NSLayoutConstraint {
     // MARK: - Method
     
     func reducePriority() -> NSLayoutConstraint {
-        self.priority = UILayoutPriority(999)
+        priority = UILayoutPriority(priority.rawValue - 1)
         
         return self
     }

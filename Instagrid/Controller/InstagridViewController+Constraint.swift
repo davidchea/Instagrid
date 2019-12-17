@@ -13,7 +13,7 @@ extension InstagridViewController {
     // MARK: - Methods
     
     func activateMainConstraints() {
-        fillSafeArea()
+        fillSafeArea(instagridStackView)
         
         let swipeImageView = instagridStackView.gridStackView.swipeStackView.swipeImageView
         swipeImageView.widthAnchor.constraint(equalTo: instagridStackView.widthAnchor, multiplier: 0.03).isActive = true
@@ -31,15 +31,6 @@ extension InstagridViewController {
             $0.widthAnchor.constraint(equalTo: instagridStackView.widthAnchor, multiplier: 0.2).reducePriority().isActive = true
             $0.heightAnchor.constraint(equalTo: instagridStackView.heightAnchor, multiplier: 0.2).isActive = true
         }
-    }
-    
-    private func fillSafeArea() {
-        NSLayoutConstraint.activate([
-            instagridStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            instagridStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            instagridStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            instagridStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
-        ])
     }
     
     func addOrientationConstraints() {
