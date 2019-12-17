@@ -12,7 +12,7 @@ class InstagridViewController: UIViewController {
     
     // MARK: - Properties
     
-    @AutoLayout(view: InstagridStackView(frame: CGRect()))
+    @AutoLayout(InstagridStackView(frame: CGRect()))
     var instagridStackView
     
     var portraitConstraints = [NSLayoutConstraint]()

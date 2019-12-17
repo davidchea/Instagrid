@@ -17,22 +17,22 @@ extension InstagridViewController {
         landscapeConstraints.append(instagridImageView.widthAnchor.constraint(equalTo: instagridStackView.heightAnchor, multiplier: 0.3))
         landscapeConstraints.append(instagridImageView.heightAnchor.constraint(equalTo: instagridStackView.widthAnchor, multiplier: 0.07))
         
-        let gridStackView = instagridStackView.gridStackView
-        landscapeConstraints.append(gridStackView.leadingAnchor.constraint(equalTo: instagridStackView.leadingAnchor))
-        landscapeConstraints.append(gridStackView.trailingAnchor.constraint(equalTo: instagridStackView.trailingAnchor))
+        let actionStackView = instagridStackView.actionStackView
+        landscapeConstraints.append(actionStackView.leadingAnchor.constraint(equalTo: instagridStackView.leadingAnchor))
+        landscapeConstraints.append(actionStackView.trailingAnchor.constraint(equalTo: instagridStackView.trailingAnchor))
        
-        let gridView = gridStackView.gridView
-        landscapeConstraints.append(gridView.widthAnchor.constraint(equalTo: instagridStackView.heightAnchor, multiplier: 0.8))
+        let gridStackView = actionStackView.gridStackView
+        landscapeConstraints.append(gridStackView.widthAnchor.constraint(equalTo: instagridStackView.heightAnchor, multiplier: 0.8))
     }
     
     func activateLandscapeConstraints() {
-        instagridStackView.gridStackView.axis = .horizontal
-        instagridStackView.gridStackView.layoutStackView.axis = .vertical
+        instagridStackView.actionStackView.axis = .horizontal
+        instagridStackView.actionStackView.layoutStackView.axis = .vertical
         
         instagridStackView.spacing = .zero
         
-        instagridStackView.gridStackView.swipeStackView.swipeImageView.image = UIImage(named: "Arrow Left")
-        instagridStackView.gridStackView.swipeStackView.swipeLabel.text = "Swipe left to share"
+        instagridStackView.actionStackView.swipeStackView.swipeImageView.image = UIImage(named: "Arrow Left")
+        instagridStackView.actionStackView.swipeStackView.swipeLabel.text = "Swipe left to share"
         
         NSLayoutConstraint.deactivate(portraitConstraints)
         NSLayoutConstraint.activate(landscapeConstraints)

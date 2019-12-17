@@ -1,22 +1,25 @@
 //
-//  InstagridStackView.swift
+//  ActionStackView.swift
 //  Instagrid
 //
-//  Created by David Chea on 16/12/2019.
+//  Created by David Chea on 11/12/2019.
 //  Copyright © 2019 David Chea. All rights reserved.
 //
 
 import UIKit
 
-class InstagridStackView: UIStackView, StackView {
+class ActionStackView: UIStackView, StackView {
     
     // MARK: - Properties
     
-    @AutoLayout(UIImageView(image: UIImage(named: "Instagrid")))
-    var instagridImageView
+    @AutoLayout(SwipeStackView(frame: CGRect()))
+    var swipeStackView
     
-    @AutoLayout(ActionStackView(frame: CGRect()))
-    var actionStackView
+    @AutoLayout(GridStackView(frame: CGRect()))
+    var gridStackView
+    
+    @AutoLayout(LayoutStackView(frame: CGRect()))
+    var layoutStackView
     
     // MARK: - Initializers
     
@@ -24,7 +27,7 @@ class InstagridStackView: UIStackView, StackView {
         super.init(frame: frame)
         
         configureStackView()
-        [instagridImageView, actionStackView].forEach { addArrangedSubview($0) }
+        [swipeStackView, gridStackView, layoutStackView].forEach { addArrangedSubview($0) }
     }
     
     required init(coder: NSCoder) {
@@ -34,7 +37,7 @@ class InstagridStackView: UIStackView, StackView {
     // MARK: - Protocol method
     
     func configureStackView() {
-        axis = .vertical
         alignment = .center
+        distribution = .equalSpacing
     }
 }

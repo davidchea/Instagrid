@@ -8,14 +8,14 @@
 
 import UIKit
 
-class SwipeStackView: UIStackView {
+class SwipeStackView: UIStackView, StackView {
     
     // MARK: - Properties
         
-    @AutoLayout(view: UIImageView(image: nil))
+    @AutoLayout(UIImageView(image: nil))
     var swipeImageView
     
-    @AutoLayout(view: UILabel())
+    @AutoLayout(UILabel())
     var swipeLabel
     
     // MARK: - Initializers
@@ -23,14 +23,19 @@ class SwipeStackView: UIStackView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        axis = .vertical
-        alignment = .center
-        spacing = 10
-        
+        configureStackView()
         [swipeImageView, swipeLabel].forEach { addArrangedSubview($0) }
     }
     
     required init(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    // MARK: - Protocol method
+    
+    func configureStackView() {
+        axis = .vertical
+        alignment = .center
+        spacing = UIStackView.spacingUseSystem
     }
 }

@@ -17,7 +17,7 @@ struct AutoLayout<T: UIView> {
     
     // MARK: - Initializer
     
-    init(view: T) {
+    init(_ view: T) {
         wrappedValue = view
         wrappedValue.translatesAutoresizingMaskIntoConstraints = false
         
