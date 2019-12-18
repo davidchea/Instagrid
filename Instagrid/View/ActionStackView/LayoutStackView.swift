@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LayoutStackView: UIStackView, StackView {
+class LayoutStackView: UIStackView, StackView, Identifier {
     
     // MARK: - Properties
     
@@ -28,6 +28,8 @@ class LayoutStackView: UIStackView, StackView {
         
         configureStackView()
         [firstLayoutImageView, secondLayoutImageView, thirdLayoutImageView].forEach { addArrangedSubview($0) }
+        
+        setIdentifiers()
     }
     
     required init(coder: NSCoder) {
@@ -38,5 +40,13 @@ class LayoutStackView: UIStackView, StackView {
     
     func configureStackView() {
         spacing = 25
+    }
+    
+    // MARK: - Protocol method
+    
+    func setIdentifiers() {
+        firstLayoutImageView.accessibilityIdentifier = "Layout 1"
+        secondLayoutImageView.accessibilityIdentifier = "Layout 2"
+        thirdLayoutImageView.accessibilityIdentifier = "Layout 3"
     }
 }

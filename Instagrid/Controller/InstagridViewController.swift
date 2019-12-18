@@ -18,6 +18,9 @@ class InstagridViewController: UIViewController {
     var portraitConstraints = [NSLayoutConstraint]()
     var landscapeConstraints = [NSLayoutConstraint]()
     
+    let imagePickerController = UIImagePickerController()
+    var imageTappedIdentifier: String!
+    
     // MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -28,6 +31,9 @@ class InstagridViewController: UIViewController {
         
         activateMainConstraints()
         addOrientationConstraints()
+        
+        addTapGestureRecognizers()
+        imagePickerController.delegate = self
     }
     
     override func viewDidLayoutSubviews() {

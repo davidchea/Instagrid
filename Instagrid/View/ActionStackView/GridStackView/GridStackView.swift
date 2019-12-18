@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GridStackView: UIStackView, StackView {
+class GridStackView: UIStackView, StackView, Identifier {
     
     // MARK: - Properties
     
@@ -26,8 +26,6 @@ class GridStackView: UIStackView, StackView {
     @AutoLayout(ImageStackView(frame: CGRect()))
     var bottomImageStackView
     
-    let imagePickerController = UIImagePickerController()
-    
     // MARK: - Initializers
 
     override init(frame: CGRect) {
@@ -39,14 +37,15 @@ class GridStackView: UIStackView, StackView {
         backgroundView.fill(to: self)
         [topImageStackView, bottomImageStackView].forEach { addArrangedSubview($0) }
         
-        imagePickerController.delegate = self
+        setIdentifiers()
+        bottomImageStackView.rightPlusView.isHidden = true
     }
     
     required init(coder: NSCoder) {
         super.init(coder: coder)
     }
     
-    // MARK: - Protocol method
+    // MARK: - Protocol methods
     
     func configureStackView() {
         axis = .vertical
@@ -55,5 +54,12 @@ class GridStackView: UIStackView, StackView {
         
         isLayoutMarginsRelativeArrangement = true
         layoutMargins = UIEdgeInsets(top: .gridSpacing, left: .gridSpacing, bottom: .gridSpacing, right: .gridSpacing)
+    }
+    
+    func setIdentifiers() {
+        topImageStackView.leftPlusView.accessibilityIdentifier = "TopLeft"
+        topImageStackView.rightPlusView.accessibilityIdentifier = "TopRight"
+        bottomImageStackView.leftPlusView.accessibilityIdentifier = "BottomLeft"
+        bottomImageStackView.rightPlusView.accessibilityIdentifier = "BottomRight"
     }
 }

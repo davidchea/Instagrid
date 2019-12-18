@@ -8,42 +8,38 @@
 
 import UIKit
 
-extension ActionStackView {
+extension ActionStackView: TapGestureRecognizer {
+    
+    // MARK: - Protocol method
+    
+    func addTapGestureRecognizers() {
+        layoutStackView.firstLayoutImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(layoutTapped(_:))))
+        layoutStackView.secondLayoutImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(layoutTapped(_:))))
+        layoutStackView.thirdLayoutImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(layoutTapped(_:))))
+    }
     
     // MARK: - Methods
     
-    func addTapGestureRecognizers() {
-        layoutStackView.firstLayoutImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(firstLayoutTapped)))
-        layoutStackView.secondLayoutImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(secondLayoutTapped)))
-        layoutStackView.thirdLayoutImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(thirdLayoutTapped)))
+    @objc private func layoutTapped(_ tapGestureRecognizer: UITapGestureRecognizer) {
+        let id = tapGestureRecognizer.view!.accessibilityIdentifier
+        switch id {
+        case "Layout 1":
+            configureLayout("Selected Layout 1", "Layout 2", "Layout 3", isTopHidden: true, isBottomHidden: false)
+        case "Layout 2":
+            configureLayout("Layout 1", "Selected Layout 2", "Layout 3", isTopHidden: false, isBottomHidden: true)
+        case "Layout 3":
+            configureLayout("Layout 1", "Layout 2", "Selected Layout 3", isTopHidden: false, isBottomHidden: false)
+        default:
+            break
+        }
     }
     
-    @objc private func firstLayoutTapped() {
-        layoutStackView.firstLayoutImageView.image = UIImage(named: "Selected Layout 1")
-        layoutStackView.secondLayoutImageView.image = UIImage(named: "Layout 2")
-        layoutStackView.thirdLayoutImageView.image = UIImage(named: "Layout 3")
+    private func configureLayout(_ firstLayout: String, _ secondLayout: String, _ thirdLayout: String, isTopHidden: Bool, isBottomHidden: Bool) {
+        layoutStackView.firstLayoutImageView.image = UIImage(named: firstLayout)
+        layoutStackView.secondLayoutImageView.image = UIImage(named: secondLayout)
+        layoutStackView.thirdLayoutImageView.image = UIImage(named: thirdLayout)
         
-        hideImageView(top: true, bottom: false)
-    }
-      
-    @objc private func secondLayoutTapped() {
-        layoutStackView.firstLayoutImageView.image = UIImage(named: "Layout 1")
-        layoutStackView.secondLayoutImageView.image = UIImage(named: "Selected Layout 2")
-        layoutStackView.thirdLayoutImageView.image = UIImage(named: "Layout 3")
-        
-        hideImageView(top: false, bottom: true)
-    }
-      
-    @objc private func thirdLayoutTapped() {
-        layoutStackView.firstLayoutImageView.image = UIImage(named: "Layout 1")
-        layoutStackView.secondLayoutImageView.image = UIImage(named: "Layout 2")
-        layoutStackView.thirdLayoutImageView.image = UIImage(named: "Selected Layout 3")
-        
-        hideImageView(top: false, bottom: false)
-    }
-    
-    private func hideImageView(top: Bool, bottom: Bool) {
-        gridStackView.topImageStackView.rightPlusView.isHidden = top
-        gridStackView.bottomImageStackView.rightPlusView.isHidden = bottom
+        gridStackView.topImageStackView.rightPlusView.isHidden = isTopHidden
+        gridStackView.bottomImageStackView.rightPlusView.isHidden = isBottomHidden
     }
 }
