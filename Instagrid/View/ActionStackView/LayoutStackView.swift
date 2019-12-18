@@ -28,8 +28,6 @@ class LayoutStackView: UIStackView, StackView {
         
         configureStackView()
         [firstLayoutImageView, secondLayoutImageView, thirdLayoutImageView].forEach { addArrangedSubview($0) }
-        
-        addTapGestureRecognizers()
     }
     
     required init(coder: NSCoder) {

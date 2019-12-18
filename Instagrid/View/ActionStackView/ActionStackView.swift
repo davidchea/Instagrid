@@ -28,6 +28,8 @@ class ActionStackView: UIStackView, StackView {
         
         configureStackView()
         [swipeStackView, gridStackView, layoutStackView].forEach { addArrangedSubview($0) }
+        
+        addTapGestureRecognizers()
     }
     
     required init(coder: NSCoder) {

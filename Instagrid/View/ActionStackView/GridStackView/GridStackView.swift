@@ -21,14 +21,12 @@ class GridStackView: UIStackView, StackView {
     }()
     
     @AutoLayout(ImageStackView(frame: CGRect()))
-    var topStackView
+    var topImageStackView
     
     @AutoLayout(ImageStackView(frame: CGRect()))
-    var bottomStackView
+    var bottomImageStackView
     
-    var firstLayoutConstraints = [NSLayoutConstraint]()
-    var secondLayoutConstraints = [NSLayoutConstraint]()
-    var thirdLayoutConstraints = [NSLayoutConstraint]()
+    let imagePickerController = UIImagePickerController()
     
     // MARK: - Initializers
 
@@ -39,8 +37,9 @@ class GridStackView: UIStackView, StackView {
         
         insertSubview(backgroundView, at: 0)
         backgroundView.fill(to: self)
+        [topImageStackView, bottomImageStackView].forEach { addArrangedSubview($0) }
         
-        [topStackView, bottomStackView].forEach { addArrangedSubview($0) }
+        imagePickerController.delegate = self
     }
     
     required init(coder: NSCoder) {
@@ -51,8 +50,9 @@ class GridStackView: UIStackView, StackView {
     
     func configureStackView() {
         axis = .vertical
+        distribution = .fillEqually
         spacing = .gridSpacing
-               
+        
         isLayoutMarginsRelativeArrangement = true
         layoutMargins = UIEdgeInsets(top: .gridSpacing, left: .gridSpacing, bottom: .gridSpacing, right: .gridSpacing)
     }

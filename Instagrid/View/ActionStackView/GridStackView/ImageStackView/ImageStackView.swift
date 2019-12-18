@@ -12,21 +12,21 @@ class ImageStackView: UIStackView, StackView {
     
     // MARK: - Properties
     
-    @AutoLayout(UIImageView(image: UIImage(named: "Plus")))
-    var leftImageView
+    @AutoLayout(PlusView(frame: CGRect()))
+    var leftPlusView
     
-    @AutoLayout(UIImageView(image: UIImage(named: "Plus")))
-    var rightImageView
+    @AutoLayout(PlusView(frame: CGRect()))
+    var rightPlusView
     
     // MARK: - Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setWhiteBackgrounds()
-        
         configureStackView()
-        [leftImageView, rightImageView].forEach { addArrangedSubview($0) }
+        [leftPlusView, rightPlusView].forEach { addArrangedSubview($0) }
+        
+        setWhiteBackgrounds()
     }
     
     required init(coder: NSCoder) {
@@ -36,13 +36,14 @@ class ImageStackView: UIStackView, StackView {
     // MARK: - Protocol method
     
     func configureStackView() {
+        distribution = .fillEqually
         spacing = .gridSpacing
     }
     
     // MARK: - Method
     
     private func setWhiteBackgrounds() {
-        leftImageView.backgroundColor = .white
-        rightImageView.backgroundColor = .white
+        leftPlusView.backgroundColor = .white
+        rightPlusView.backgroundColor = .white
     }
 }
