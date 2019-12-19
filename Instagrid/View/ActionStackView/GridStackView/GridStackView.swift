@@ -33,7 +33,7 @@ class GridStackView: UIStackView, StackView, Identifier {
         
         configureStackView()
         
-        insertSubview(backgroundView, at: 0)
+        addSubview(backgroundView)
         backgroundView.fill(to: self)
         [topImageStackView, bottomImageStackView].forEach { addArrangedSubview($0) }
         
