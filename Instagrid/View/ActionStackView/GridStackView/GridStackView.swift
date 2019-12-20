@@ -34,7 +34,7 @@ class GridStackView: UIStackView, StackView, Identifier {
         configureStackView()
         
         addSubview(backgroundView)
-        backgroundView.fill(to: self)
+        backgroundView.fillSuperview()
         [topImageStackView, bottomImageStackView].forEach { addArrangedSubview($0) }
         
         setIdentifiers()
@@ -61,5 +61,16 @@ class GridStackView: UIStackView, StackView, Identifier {
         topImageStackView.rightPlusView.accessibilityIdentifier = "TopRight"
         bottomImageStackView.leftPlusView.accessibilityIdentifier = "BottomLeft"
         bottomImageStackView.rightPlusView.accessibilityIdentifier = "BottomRight"
+    }
+    
+    // MARK: - Method
+    
+    func asImage() -> UIImage {
+        let graphicsImageRenderer = UIGraphicsImageRenderer(bounds: bounds)
+        let image = graphicsImageRenderer.image { graphicsImageRendererContext in
+            layer.render(in: graphicsImageRendererContext.cgContext)
+        }
+        
+        return image
     }
 }

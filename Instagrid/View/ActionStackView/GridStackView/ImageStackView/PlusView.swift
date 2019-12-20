@@ -21,19 +21,11 @@ class PlusView: UIView {
         super.init(frame: frame)
         
         addSubview(plusImageView)
-        activateConstraints()
+        plusImageView.fillSuperview()
+        plusImageView.contentMode = .center
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-    }
-    
-    // MARK: - Method
-    
-    private func activateConstraints() {
-        NSLayoutConstraint.activate([
-            plusImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            plusImageView.centerYAnchor.constraint(equalTo: centerYAnchor)
-        ])
     }
 }

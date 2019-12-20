@@ -22,7 +22,6 @@ struct AutoLayout<T: UIView> {
         wrappedValue.translatesAutoresizingMaskIntoConstraints = false
         
         if let imageView = wrappedValue as? UIImageView {
-            imageView.contentMode = .scaleAspectFit
             imageView.isUserInteractionEnabled = true
         }
         else if let label = wrappedValue as? UILabel {

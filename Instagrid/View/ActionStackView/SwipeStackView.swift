@@ -12,7 +12,7 @@ class SwipeStackView: UIStackView, StackView {
     
     // MARK: - Properties
         
-    @AutoLayout(UIImageView(image: nil))
+    @AutoLayout(UIImageView())
     var swipeImageView
     
     @AutoLayout(UILabel())
@@ -25,6 +25,8 @@ class SwipeStackView: UIStackView, StackView {
         
         configureStackView()
         [swipeImageView, swipeLabel].forEach { addArrangedSubview($0) }
+        
+        swipeImageView.contentMode = .scaleAspectFit
     }
     
     required init(coder: NSCoder) {

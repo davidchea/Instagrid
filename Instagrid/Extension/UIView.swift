@@ -10,14 +10,25 @@ import UIKit
 
 extension UIView {
     
-    // MARK: - Method
+    // MARK: - Methods
     
-    func fill(to view: UIView) {
+    func fillSuperview() {
+        guard let superview = superview else { fatalError("No superview found.") }
+        
         NSLayoutConstraint.activate([
-            topAnchor.constraint(equalTo: view.topAnchor),
-            bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            topAnchor.constraint(equalTo: superview.topAnchor),
+            bottomAnchor.constraint(equalTo: superview.bottomAnchor),
+            leadingAnchor.constraint(equalTo: superview.leadingAnchor),
+            trailingAnchor.constraint(equalTo: superview.trailingAnchor)
+        ])
+    }
+    
+    func fillLayoutGuide(_ layoutGuide: UILayoutGuide) {
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: layoutGuide.topAnchor),
+            bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor),
+            leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor),
+            trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor)
         ])
     }
 }

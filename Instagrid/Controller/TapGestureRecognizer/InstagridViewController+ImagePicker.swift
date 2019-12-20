@@ -16,18 +16,22 @@ extension InstagridViewController: UIImagePickerControllerDelegate, UINavigation
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         let gridStackView = instagridStackView.actionStackView.gridStackView
         
+        var plusImageView = UIImageView()
         switch imageTappedIdentifier {
         case "TopLeft":
-            gridStackView.topImageStackView.leftPlusView.plusImageView.image = image
+            plusImageView = gridStackView.topImageStackView.leftPlusView.plusImageView
         case "TopRight":
-            gridStackView.topImageStackView.rightPlusView.plusImageView.image = image
+            plusImageView = gridStackView.topImageStackView.rightPlusView.plusImageView
         case "BottomLeft":
-            gridStackView.bottomImageStackView.leftPlusView.plusImageView.image = image
+            plusImageView = gridStackView.bottomImageStackView.leftPlusView.plusImageView
         case "BottomRight":
-            gridStackView.bottomImageStackView.rightPlusView.plusImageView.image = image
+            plusImageView = gridStackView.bottomImageStackView.rightPlusView.plusImageView
         default:
-            break
+            plusImageView = UIImageView()
         }
+        
+        plusImageView.image = image
+        plusImageView.contentMode = .scaleToFill
         
         dismiss(animated: true, completion: nil)
     }

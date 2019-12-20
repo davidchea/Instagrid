@@ -22,13 +22,15 @@ extension InstagridViewController {
     }
     
     func activatePortraitConstraints() {
+        addSwipeGestureRecognizer(.up)
+        
+        instagridStackView.actionStackView.swipeStackView.swipeImageView.image = UIImage(named: "Arrow Up")
+        instagridStackView.actionStackView.swipeStackView.swipeLabel.text = "Swipe up to share"
+        
         instagridStackView.actionStackView.axis = .vertical
         instagridStackView.actionStackView.layoutStackView.axis = .horizontal
         
         instagridStackView.spacing = 100
-        
-        instagridStackView.actionStackView.swipeStackView.swipeImageView.image = UIImage(named: "Arrow Up")
-        instagridStackView.actionStackView.swipeStackView.swipeLabel.text = "Swipe up to share"
         
         NSLayoutConstraint.deactivate(landscapeConstraints)
         NSLayoutConstraint.activate(portraitConstraints)

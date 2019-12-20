@@ -27,7 +27,10 @@ class LayoutStackView: UIStackView, StackView, Identifier {
         super.init(frame: frame)
         
         configureStackView()
-        [firstLayoutImageView, secondLayoutImageView, thirdLayoutImageView].forEach { addArrangedSubview($0) }
+        [firstLayoutImageView, secondLayoutImageView, thirdLayoutImageView].forEach {
+            addArrangedSubview($0)
+            $0.contentMode = .scaleAspectFit
+        }
         
         setIdentifiers()
     }

@@ -26,13 +26,15 @@ extension InstagridViewController {
     }
     
     func activateLandscapeConstraints() {
+        addSwipeGestureRecognizer(.left)
+        
+        instagridStackView.actionStackView.swipeStackView.swipeImageView.image = UIImage(named: "Arrow Left")
+        instagridStackView.actionStackView.swipeStackView.swipeLabel.text = "Swipe left to share"
+        
         instagridStackView.actionStackView.axis = .horizontal
         instagridStackView.actionStackView.layoutStackView.axis = .vertical
         
         instagridStackView.spacing = .zero
-        
-        instagridStackView.actionStackView.swipeStackView.swipeImageView.image = UIImage(named: "Arrow Left")
-        instagridStackView.actionStackView.swipeStackView.swipeLabel.text = "Swipe left to share"
         
         NSLayoutConstraint.deactivate(portraitConstraints)
         NSLayoutConstraint.activate(landscapeConstraints)

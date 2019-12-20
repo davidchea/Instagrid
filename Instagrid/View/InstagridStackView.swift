@@ -25,6 +25,8 @@ class InstagridStackView: UIStackView, StackView {
         
         configureStackView()
         [instagridImageView, actionStackView].forEach { addArrangedSubview($0) }
+        
+        instagridImageView.contentMode = .scaleAspectFit
     }
     
     required init(coder: NSCoder) {

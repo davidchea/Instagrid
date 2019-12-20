@@ -15,6 +15,7 @@
 		6372567C23A98687009CB37A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372567B23A98687009CB37A /* UIView.swift */; };
 		6372567F23A98DF6009CB37A /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372567E23A98DF6009CB37A /* StackView.swift */; };
 		6372568123A9986E009CB37A /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372568023A9986E009CB37A /* CGFloat.swift */; };
+		6374F26723AC324C005BB07D /* InstagridViewController+SwipeGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6374F26623AC324C005BB07D /* InstagridViewController+SwipeGestureRecognizer.swift */; };
 		637B412623AAAC1900165694 /* InstagridViewController+TapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637B412523AAAC1900165694 /* InstagridViewController+TapGestureRecognizer.swift */; };
 		637B412823AAAC7700165694 /* InstagridViewController+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637B412723AAAC7700165694 /* InstagridViewController+ImagePicker.swift */; };
 		637B412A23AAB76700165694 /* TapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637B412923AAB76700165694 /* TapGestureRecognizer.swift */; };
@@ -33,7 +34,6 @@
 		63C37D9F23A687DD00E2B7F6 /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C37D9E23A687DD00E2B7F6 /* AutoLayout.swift */; };
 		63C82B0523A51BD2001AD197 /* InstagridViewController+Portrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C82B0423A51BD2001AD197 /* InstagridViewController+Portrait.swift */; };
 		63C82B0723A51BFD001AD197 /* InstagridViewController+Landscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C82B0623A51BFD001AD197 /* InstagridViewController+Landscape.swift */; };
-		63E5517123A921B0006D0B84 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E5517023A921B0006D0B84 /* UIViewController.swift */; };
 		63E9491123A1567A001CA74B /* ActionStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9491023A15679001CA74B /* ActionStackView.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +46,7 @@
 		6372567B23A98687009CB37A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		6372567E23A98DF6009CB37A /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
 		6372568023A9986E009CB37A /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
+		6374F26623AC324C005BB07D /* InstagridViewController+SwipeGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstagridViewController+SwipeGestureRecognizer.swift"; sourceTree = "<group>"; };
 		637B412523AAAC1900165694 /* InstagridViewController+TapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstagridViewController+TapGestureRecognizer.swift"; sourceTree = "<group>"; };
 		637B412723AAAC7700165694 /* InstagridViewController+ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstagridViewController+ImagePicker.swift"; sourceTree = "<group>"; };
 		637B412923AAB76700165694 /* TapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureRecognizer.swift; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		63C37D9E23A687DD00E2B7F6 /* AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
 		63C82B0423A51BD2001AD197 /* InstagridViewController+Portrait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstagridViewController+Portrait.swift"; sourceTree = "<group>"; };
 		63C82B0623A51BFD001AD197 /* InstagridViewController+Landscape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstagridViewController+Landscape.swift"; sourceTree = "<group>"; };
-		63E5517023A921B0006D0B84 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		63E9491023A15679001CA74B /* ActionStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,11 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				63982585239FEC470019DF2F /* InstagridViewController.swift */,
-				63B0AA7623A048240078965E /* InstagridViewController+Constraint.swift */,
-				63C82B0423A51BD2001AD197 /* InstagridViewController+Portrait.swift */,
-				63C82B0623A51BFD001AD197 /* InstagridViewController+Landscape.swift */,
-				637B412523AAAC1900165694 /* InstagridViewController+TapGestureRecognizer.swift */,
-				637B412723AAAC7700165694 /* InstagridViewController+ImagePicker.swift */,
+				6374F26323AC31E1005BB07D /* Constraint */,
+				6374F26423AC31F6005BB07D /* TapGestureRecognizer */,
+				6374F26523AC320C005BB07D /* SwipeGestureRecognizer */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -143,6 +141,33 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		6374F26323AC31E1005BB07D /* Constraint */ = {
+			isa = PBXGroup;
+			children = (
+				63B0AA7623A048240078965E /* InstagridViewController+Constraint.swift */,
+				63C82B0423A51BD2001AD197 /* InstagridViewController+Portrait.swift */,
+				63C82B0623A51BFD001AD197 /* InstagridViewController+Landscape.swift */,
+			);
+			path = Constraint;
+			sourceTree = "<group>";
+		};
+		6374F26423AC31F6005BB07D /* TapGestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				637B412523AAAC1900165694 /* InstagridViewController+TapGestureRecognizer.swift */,
+				637B412723AAAC7700165694 /* InstagridViewController+ImagePicker.swift */,
+			);
+			path = TapGestureRecognizer;
+			sourceTree = "<group>";
+		};
+		6374F26523AC320C005BB07D /* SwipeGestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				6374F26623AC324C005BB07D /* InstagridViewController+SwipeGestureRecognizer.swift */,
+			);
+			path = SwipeGestureRecognizer;
+			sourceTree = "<group>";
+		};
 		6397D0C023AA7FDC0089BF69 /* ImageStackView */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +180,6 @@
 		63982587239FF8700019DF2F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				63E5517023A921B0006D0B84 /* UIViewController.swift */,
 				6372567B23A98687009CB37A /* UIView.swift */,
 				63982588239FF9220019DF2F /* UIColor.swift */,
 				63C37D9B23A680D800E2B7F6 /* NSLayoutConstraint.swift */,
@@ -304,9 +328,9 @@
 				637B412A23AAB76700165694 /* TapGestureRecognizer.swift in Sources */,
 				630A6B1D23A2AA39003BD368 /* SwipeStackView.swift in Sources */,
 				6397D0BF23AA78990089BF69 /* PlusView.swift in Sources */,
+				6374F26723AC324C005BB07D /* InstagridViewController+SwipeGestureRecognizer.swift in Sources */,
 				637B412823AAAC7700165694 /* InstagridViewController+ImagePicker.swift in Sources */,
 				637B412C23AAB7C400165694 /* Identifier.swift in Sources */,
-				63E5517123A921B0006D0B84 /* UIViewController.swift in Sources */,
 				6372567C23A98687009CB37A /* UIView.swift in Sources */,
 				633EF2ED23A151A000C611DF /* GridStackView.swift in Sources */,
 			);

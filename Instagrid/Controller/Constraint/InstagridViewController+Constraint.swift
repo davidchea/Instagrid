@@ -13,7 +13,7 @@ extension InstagridViewController {
     // MARK: - Methods
     
     func activateMainConstraints() {
-        fillSafeArea(instagridStackView)
+        instagridStackView.fillLayoutGuide(view.safeAreaLayoutGuide)
         
         let swipeImageView = instagridStackView.actionStackView.swipeStackView.swipeImageView
         swipeImageView.widthAnchor.constraint(equalTo: instagridStackView.widthAnchor, multiplier: 0.03).isActive = true
