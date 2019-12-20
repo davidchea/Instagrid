@@ -116,6 +116,7 @@
 		633EF2EB23A1514000C611DF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6397D0BE23AA78990089BF69 /* PlusView.swift */,
 				63AAEA6223A7E91900F6770F /* InstagridStackView.swift */,
 				63AAEA6423A802D000F6770F /* ActionStackView */,
 			);
@@ -172,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				6372567923A97898009CB37A /* ImageStackView.swift */,
-				6397D0BE23AA78990089BF69 /* PlusView.swift */,
 			);
 			path = ImageStackView;
 			sourceTree = "<group>";

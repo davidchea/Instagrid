@@ -11,14 +11,16 @@ import UIKit
 class PlusView: UIView {
     
     // MARK: - Property
-
-    @AutoLayout(UIImageView(image: UIImage(named: "Plus")))
-    var plusImageView
+    
+    @AutoLayout
+    private var plusImageView = UIImageView(image: UIImage(named: "Plus"))
     
     // MARK: - Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        backgroundColor = .white
         
         addSubview(plusImageView)
         plusImageView.fillSuperview()

@@ -13,30 +13,30 @@ extension InstagridViewController {
     // MARK: - Methods
     
     func addLandscapeConstraints() {
-        let instagridImageView = instagridStackView.instagridImageView
-        landscapeConstraints.append(instagridImageView.widthAnchor.constraint(equalTo: instagridStackView.heightAnchor, multiplier: 0.3))
-        landscapeConstraints.append(instagridImageView.heightAnchor.constraint(equalTo: instagridStackView.widthAnchor, multiplier: 0.07))
-        
-        let actionStackView = instagridStackView.actionStackView
-        landscapeConstraints.append(actionStackView.leadingAnchor.constraint(equalTo: instagridStackView.leadingAnchor))
-        landscapeConstraints.append(actionStackView.trailingAnchor.constraint(equalTo: instagridStackView.trailingAnchor))
-       
-        let gridStackView = actionStackView.gridStackView
-        landscapeConstraints.append(gridStackView.widthAnchor.constraint(equalTo: instagridStackView.heightAnchor, multiplier: 0.8))
+//        let instagridImageView = instagridStackView.instagridImageView
+//        landscapeConstraints.append(instagridImageView.widthAnchor.constraint(equalTo: instagridStackView.heightAnchor, multiplier: 0.3))
+//        landscapeConstraints.append(instagridImageView.heightAnchor.constraint(equalTo: instagridStackView.widthAnchor, multiplier: 0.07))
+//        
+//        let actionStackView = instagridStackView.actionStackView
+//        landscapeConstraints.append(actionStackView.leadingAnchor.constraint(equalTo: instagridStackView.leadingAnchor))
+//        landscapeConstraints.append(actionStackView.trailingAnchor.constraint(equalTo: instagridStackView.trailingAnchor))
+//       
+//        let gridStackView = actionStackView.gridStackView
+//        landscapeConstraints.append(gridStackView.widthAnchor.constraint(equalTo: instagridStackView.heightAnchor, multiplier: 0.8))
     }
     
-    func activateLandscapeConstraints() {
-        addSwipeGestureRecognizer(.left)
-        
-        instagridStackView.actionStackView.swipeStackView.swipeImageView.image = UIImage(named: "Arrow Left")
-        instagridStackView.actionStackView.swipeStackView.swipeLabel.text = "Swipe left to share"
-        
-        instagridStackView.actionStackView.axis = .horizontal
-        instagridStackView.actionStackView.layoutStackView.axis = .vertical
-        
-        instagridStackView.spacing = .zero
-        
-        NSLayoutConstraint.deactivate(portraitConstraints)
-        NSLayoutConstraint.activate(landscapeConstraints)
+    func activateLandscapeMode() {
+//        addSwipeGestureRecognizer(.left)
+//
+//        instagridStackView.actionStackView.swipeStackView.swipeImageView.image = UIImage(named: "Arrow Left")
+//        instagridStackView.actionStackView.swipeStackView.swipeLabel.text = "Swipe left to share"
+//
+//        instagridStackView.actionStackView.axis = .horizontal
+//        instagridStackView.actionStackView.layoutStackView.axis = .vertical
+//
+//        instagridStackView.spacing = .zero
+//
+//        NSLayoutConstraint.deactivate(portraitConstraints)
+//        NSLayoutConstraint.activate(landscapeConstraints)
     }
 }

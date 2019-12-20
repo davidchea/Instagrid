@@ -14,19 +14,11 @@ struct AutoLayout<T: UIView> {
     // MARK: - Property
     
     let wrappedValue: T
-    
+
     // MARK: - Initializer
     
-    init(_ view: T) {
-        wrappedValue = view
+    init(wrappedValue: T) {
+        self.wrappedValue = wrappedValue
         wrappedValue.translatesAutoresizingMaskIntoConstraints = false
-        
-        if let imageView = wrappedValue as? UIImageView {
-            imageView.isUserInteractionEnabled = true
-        }
-        else if let label = wrappedValue as? UILabel {
-            label.font = UIFont(name: "Delm-Medium", size: 26)
-            label.textColor = .white
-        }
     }
 }
