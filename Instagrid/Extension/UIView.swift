@@ -26,7 +26,7 @@ extension UIView {
     func fillLayoutGuide(_ layoutGuide: UILayoutGuide) {
         NSLayoutConstraint.activate([
             topAnchor.constraint(equalTo: layoutGuide.topAnchor),
-            bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor),
+            bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor, constant: -10),
             leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor),
             trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor)
         ])

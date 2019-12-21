@@ -10,10 +10,17 @@ import UIKit
 
 class PlusView: UIView {
     
-    // MARK: - Property
+    // MARK: - Properties
     
-    @AutoLayout
-    private var plusImageView = UIImageView(image: UIImage(named: "Plus"))
+    let plusImageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "Plus"))
+        imageView.contentMode = .center
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return imageView
+    }()
+    
+    var hasImage = false
     
     // MARK: - Initializers
     
@@ -24,7 +31,6 @@ class PlusView: UIView {
         
         addSubview(plusImageView)
         plusImageView.fillSuperview()
-        plusImageView.contentMode = .center
     }
     
     required init?(coder: NSCoder) {
