@@ -51,6 +51,7 @@ class GridStackView: UIStackView {
     
     // MARK: - Methods
     
+    /// Set the stack view properties.
     private func configureStackView() {
         axis = .vertical
         distribution = .fillEqually
@@ -60,6 +61,7 @@ class GridStackView: UIStackView {
         layoutMargins = UIEdgeInsets(top: gridSpacing, left: gridSpacing, bottom: gridSpacing, right: gridSpacing)
     }
     
+    /// Set a tag for each image.
     private func setTags() {
         topImageStackView.arrangedSubviews.first!.tag = ImagePosition.topLeft.rawValue
         topImageStackView.arrangedSubviews.last!.tag = ImagePosition.topRight.rawValue
@@ -67,6 +69,7 @@ class GridStackView: UIStackView {
         bottomImageStackView.arrangedSubviews.last!.tag = ImagePosition.bottomRight.rawValue
     }
     
+    /// Transform the view as an image.
     func asImage() -> UIImage {
         let graphicsImageRenderer = UIGraphicsImageRenderer(bounds: bounds)
         let image = graphicsImageRenderer.image { graphicsImageRendererContext in

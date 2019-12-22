@@ -12,6 +12,7 @@ extension UIView {
     
     // MARK: - Methods
     
+    /// Fill the superview with the selected view.
     func fillSuperview() {
         guard let superview = superview else { fatalError("No superview found.") }
         
@@ -23,6 +24,7 @@ extension UIView {
         ])
     }
     
+    /// Fill the layout guide with the selected view.
     func fillLayoutGuide(_ layoutGuide: UILayoutGuide) {
         NSLayoutConstraint.activate([
             topAnchor.constraint(equalTo: layoutGuide.topAnchor),

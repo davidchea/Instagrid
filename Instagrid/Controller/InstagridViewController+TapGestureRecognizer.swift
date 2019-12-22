@@ -12,6 +12,7 @@ extension InstagridViewController {
     
     // MARK: - Methods
     
+    /// Add a tap gesture recognizer to pick an image or select a layout.
     func addTapGestureRecognizers() {
         gridStackView.topImageStackView.arrangedSubviews.forEach {
             $0.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:))))
@@ -25,26 +26,29 @@ extension InstagridViewController {
         }
     }
     
+    /// Trigger the image picker controller when tapping an image in the grid.
     @objc private func imageTapped(_ tapGestureRecognizer: UITapGestureRecognizer) {
         imageTappedTag = tapGestureRecognizer.view!.tag
         present(imagePickerController, animated: true, completion: nil)
     }
     
+    /// Update the grid layout when tapping on a screen bottom layout.
     @objc private func layoutTapped(_ tapGestureRecognizer: UITapGestureRecognizer) {
         let tag = tapGestureRecognizer.view!.tag
         switch tag {
         case 1:
-            configureLayout("Selected Layout 1", "Layout 2", "Layout 3", isTopHidden: true, isBottomHidden: false)
+            updateGridLayout("Selected Layout 1", "Layout 2", "Layout 3", isTopHidden: true, isBottomHidden: false)
         case 2:
-            configureLayout("Layout 1", "Selected Layout 2", "Layout 3", isTopHidden: false, isBottomHidden: true)
+            updateGridLayout("Layout 1", "Selected Layout 2", "Layout 3", isTopHidden: false, isBottomHidden: true)
         case 3:
-            configureLayout("Layout 1", "Layout 2", "Selected Layout 3", isTopHidden: false, isBottomHidden: false)
+            updateGridLayout("Layout 1", "Layout 2", "Selected Layout 3", isTopHidden: false, isBottomHidden: false)
         default:
             break
         }
     }
     
-    private func configureLayout(_ firstLayout: String, _ secondLayout: String, _ thirdLayout: String, isTopHidden: Bool, isBottomHidden: Bool) {
+    /// Hide and move an image.
+    private func updateGridLayout(_ firstLayout: String, _ secondLayout: String, _ thirdLayout: String, isTopHidden: Bool, isBottomHidden: Bool) {
         let topRightPlusView = (gridStackView.topImageStackView.arrangedSubviews.last as! PlusView)
         let bottomRightPlusView = (gridStackView.bottomImageStackView.arrangedSubviews.last as! PlusView)
         
@@ -65,6 +69,7 @@ extension InstagridViewController {
         gridStackView.bottomImageStackView.arrangedSubviews.last!.isHidden = isBottomHidden
     }
     
+    /// Move an image if it is the first or second grid layout.
     private func moveImage(startPlusView: PlusView, endPlusView: PlusView) {
         endPlusView.plusImageView.image = startPlusView.plusImageView.image
         endPlusView.plusImageView.contentMode = .scaleToFill

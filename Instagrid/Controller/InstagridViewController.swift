@@ -97,7 +97,7 @@ class InstagridViewController: UIViewController {
         addTapGestureRecognizers()
         
         buildView()
-        activateConstraints()
+        activateMainConstraints()
         addOrientionConstrains()
     }
     
@@ -111,6 +111,7 @@ class InstagridViewController: UIViewController {
     
     // MARK: - Methods
     
+    /// Add the main stack view to the view and add each view to his respective stack view.
     private func buildView() {
         view.addSubview(instagridStackView)
         
@@ -119,7 +120,8 @@ class InstagridViewController: UIViewController {
         [swipeImageView, swipeLabel].forEach { swipeStackView.addArrangedSubview($0) }
     }
     
-    private func activateConstraints() {
+    /// Fill the safe area with the main stack view and activate all the views main constraints.
+    private func activateMainConstraints() {
         instagridStackView.fillLayoutGuide(view.safeAreaLayoutGuide)
         
         let baseUnit = gridStackView.widthAnchor
@@ -143,6 +145,7 @@ class InstagridViewController: UIViewController {
         }
     }
     
+    /// Fill the portrait and landscape constraints collections.
     private func addOrientionConstrains() {
         portraitConstraints.append(gridStackView.widthAnchor.constraint(equalTo: instagridStackView.widthAnchor, multiplier: 0.8))
         
@@ -151,6 +154,7 @@ class InstagridViewController: UIViewController {
         landscapeConstraints.append(gridStackView.centerXAnchor.constraint(equalTo: instagridStackView.centerXAnchor))
     }
     
+    /// Update the layout according to the device orientation.
     private func setOrientationMode(_ orientation: Orientation) {
         switch orientation {
         case .portrait:
