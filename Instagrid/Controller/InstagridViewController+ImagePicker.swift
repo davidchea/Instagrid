@@ -9,12 +9,12 @@
 import UIKit
 
 extension InstagridViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+
     // MARK: - Delegate method
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        
+
         let plusView: PlusView
         switch imageTappedTag {
         case 1:
@@ -30,10 +30,10 @@ extension InstagridViewController: UIImagePickerControllerDelegate, UINavigation
         default:
             plusView = PlusView()
         }
-        
+
         plusView.plusImageView.image = image
         plusView.plusImageView.contentMode = .scaleToFill
-        
+
         dismiss(animated: true, completion: nil)
     }
 }

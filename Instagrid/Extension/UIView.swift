@@ -9,13 +9,13 @@
 import UIKit
 
 extension UIView {
-    
+
     // MARK: - Methods
-    
+
     /// Fill the superview with the selected view.
     func fillSuperview() {
         guard let superview = superview else { fatalError("No superview found.") }
-        
+
         NSLayoutConstraint.activate([
             topAnchor.constraint(equalTo: superview.topAnchor),
             bottomAnchor.constraint(equalTo: superview.bottomAnchor),
@@ -23,7 +23,7 @@ extension UIView {
             trailingAnchor.constraint(equalTo: superview.trailingAnchor)
         ])
     }
-    
+
     /// Fill the layout guide with the selected view.
     func fillLayoutGuide(_ layoutGuide: UILayoutGuide) {
         NSLayoutConstraint.activate([

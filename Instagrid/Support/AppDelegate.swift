@@ -10,17 +10,17 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+
     // MARK: - Property
-    
+
     var window: UIWindow? = UIWindow()
-    
+
     // MARK: - Delegate method
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         window!.makeKeyAndVisible()
         window!.rootViewController = InstagridViewController()
-        
+
         return true
     }
 }

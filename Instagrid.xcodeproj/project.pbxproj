@@ -10,6 +10,7 @@
 		630A6B1823A28294003BD368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630A6B1723A28294003BD368 /* LaunchScreen.storyboard */; };
 		633EF2ED23A151A000C611DF /* GridStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633EF2EC23A151A000C611DF /* GridStackView.swift */; };
 		63552DDB23AEB19600CCB253 /* ScaleAspectFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63552DDA23AEB19600CCB253 /* ScaleAspectFit.swift */; };
+		6363247523B102FE001CD11F /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6363247423B102FE001CD11F /* .swiftlint.yml */; };
 		6372567C23A98687009CB37A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372567B23A98687009CB37A /* UIView.swift */; };
 		6374F26723AC324C005BB07D /* InstagridViewController+SwipeGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6374F26623AC324C005BB07D /* InstagridViewController+SwipeGestureRecognizer.swift */; };
 		637B412623AAAC1900165694 /* InstagridViewController+TapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637B412523AAAC1900165694 /* InstagridViewController+TapGestureRecognizer.swift */; };
@@ -27,6 +28,7 @@
 		630A6B1723A28294003BD368 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		633EF2EC23A151A000C611DF /* GridStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridStackView.swift; sourceTree = "<group>"; };
 		63552DDA23AEB19600CCB253 /* ScaleAspectFit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleAspectFit.swift; sourceTree = "<group>"; };
+		6363247423B102FE001CD11F /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		6372567B23A98687009CB37A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		6374F26623AC324C005BB07D /* InstagridViewController+SwipeGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstagridViewController+SwipeGestureRecognizer.swift"; sourceTree = "<group>"; };
 		637B412523AAAC1900165694 /* InstagridViewController+TapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstagridViewController+TapGestureRecognizer.swift"; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				63AB9BA5239FE6D7003A22A4 /* Instagrid */,
 				63AB9BA4239FE6D7003A22A4 /* Products */,
+				6363247423B102FE001CD11F /* .swiftlint.yml */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +152,7 @@
 				63AB9B9F239FE6D7003A22A4 /* Sources */,
 				63AB9BA0239FE6D7003A22A4 /* Frameworks */,
 				63AB9BA1239FE6D7003A22A4 /* Resources */,
+				6363247323B101DF001CD11F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -197,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6363247523B102FE001CD11F /* .swiftlint.yml in Resources */,
 				63AB9BB0239FE6DB003A22A4 /* Assets.xcassets in Resources */,
 				630A6B1823A28294003BD368 /* LaunchScreen.storyboard in Resources */,
 				63AC0F9123A3993400B8E602 /* Delm-Medium.otf in Resources */,
@@ -204,6 +209,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6363247323B101DF001CD11F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63AB9B9F239FE6D7003A22A4 /* Sources */ = {
