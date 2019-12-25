@@ -16,6 +16,7 @@ class InstagridViewController: UIViewController {
 
     // MARK: - Properties
 
+    /// The main stack view containing all the views.
     let instagridStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -25,6 +26,7 @@ class InstagridViewController: UIViewController {
         return stackView
     }()
 
+    /// The stack view containing all the views except the logo.
     private let actionStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.alignment = .center
@@ -32,6 +34,7 @@ class InstagridViewController: UIViewController {
         return stackView
     }()
 
+    /// The stack view containing the swipe image view and the label.
     private let swipeStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -41,6 +44,7 @@ class InstagridViewController: UIViewController {
         return stackView
     }()
 
+    /// The stack view representing the grid of image views.
     let gridStackView: GridStackView = {
         let gridStackView = GridStackView(frame: CGRect())
         gridStackView.axis = .vertical
@@ -48,6 +52,7 @@ class InstagridViewController: UIViewController {
         return gridStackView
     }()
 
+    /// The stack view containing the layouts.
     let layoutStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
             UIImageView(image: UIImage(named: "Layout 1")),
