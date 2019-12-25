@@ -137,6 +137,7 @@ class InstagridViewController: UIViewController {
             swipeImageView.heightAnchor.constraint(equalTo: baseUnit, multiplier: 0.04)
         ])
 
+        // Set the size for each layout image
         layoutStackView.arrangedSubviews.forEach {
             NSLayoutConstraint.activate([
                 $0.widthAnchor.constraint(equalTo: baseUnit, multiplier: 0.2),

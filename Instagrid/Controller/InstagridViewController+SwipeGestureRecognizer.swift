@@ -30,6 +30,7 @@ extension InstagridViewController {
         let image = gridStackView.asImage()
         let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
 
+        // Trigger the grid animation depending on the device orientation
         switch direction {
         case .up:
             UIView.animate(withDuration: 0.5) { self.gridStackView.center.y -= maxY }

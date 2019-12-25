@@ -15,6 +15,7 @@ extension InstagridViewController: UIImagePickerControllerDelegate, UINavigation
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
 
+        // Set the image in the selected location
         let plusView: PlusView
         switch imageTappedTag {
         case 1:
