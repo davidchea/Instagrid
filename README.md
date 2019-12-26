@@ -6,7 +6,7 @@ This project is part of the [OpenClassrooms iOS Developer Path](https://openclas
 
 ## Screenshots
 
-<p float="left">
+<p float="left" align="center">
     <img src="./README-IMAGES/screenshot-instagrid.jpg" width="289" height="518">
 </p>
 
