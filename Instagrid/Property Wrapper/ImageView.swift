@@ -1,5 +1,5 @@
 //
-//  ScaleAspectFit.swift
+//  ImageView.swift
 //  Instagrid
 //
 //  Created by David Chea on 21/12/2019.
@@ -9,7 +9,7 @@
 import UIKit
 
 @propertyWrapper
-struct ScaleAspectFit<T: UIImageView> {
+struct ImageView<T: UIImageView> {
 
     // MARK: - Property
 
@@ -19,6 +19,7 @@ struct ScaleAspectFit<T: UIImageView> {
 
     init(_ imageView: T) {
         wrappedValue = imageView
+        wrappedValue.translatesAutoresizingMaskIntoConstraints = false
         wrappedValue.contentMode = .scaleAspectFit
     }
 }

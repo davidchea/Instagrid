@@ -16,19 +16,10 @@ class InstagridViewController: UIViewController {
 
     // MARK: - Properties
 
-    /// The main stack view containing all the views.
-    let instagridStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.alignment = .center
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-
-        return stackView
-    }()
-
     /// The stack view containing all the views except the logo.
-    private let actionStackView: UIStackView = {
+    private let instagridStackView: UIStackView = {
         let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = .center
 
         return stackView
@@ -70,10 +61,10 @@ class InstagridViewController: UIViewController {
         return stackView
     }()
 
-    @ScaleAspectFit(UIImageView(image: UIImage(named: "Instagrid")))
+    @ImageView(UIImageView(image: UIImage(named: "Instagrid")))
     private var instagridImageView
 
-    @ScaleAspectFit(UIImageView(image: UIImage()))
+    @ImageView(UIImageView(image: UIImage()))
     private var swipeImageView
 
     private let swipeLabel: UILabel = {
@@ -118,23 +109,23 @@ class InstagridViewController: UIViewController {
 
     /// Add the main stack view to the view and add each view to his respective stack view.
     private func buildView() {
+        view.addSubview(instagridImageView)
         view.addSubview(instagridStackView)
 
-        [instagridImageView, actionStackView].forEach { instagridStackView.addArrangedSubview($0) }
-        [UIView(), swipeStackView, gridStackView, layoutStackView, UIView()].forEach { actionStackView.addArrangedSubview($0) }
+        [UIView(), swipeStackView, gridStackView, layoutStackView, UIView()].forEach { instagridStackView.addArrangedSubview($0) }
         [swipeImageView, swipeLabel].forEach { swipeStackView.addArrangedSubview($0) }
     }
 
     /// Fill the safe area with the main stack view and activate all the views main constraints.
     private func activateMainConstraints() {
-        instagridStackView.fillLayoutGuide(view.safeAreaLayoutGuide)
-
         let baseUnit = gridStackView.widthAnchor
         NSLayoutConstraint.activate([
-            actionStackView.leadingAnchor.constraint(equalTo: instagridStackView.leadingAnchor),
-            actionStackView.trailingAnchor.constraint(equalTo: instagridStackView.trailingAnchor),
-            actionStackView.arrangedSubviews.first!.widthAnchor.constraint(equalTo: actionStackView.arrangedSubviews.last!.widthAnchor),
-            actionStackView.arrangedSubviews.first!.heightAnchor.constraint(equalTo: actionStackView.arrangedSubviews.last!.heightAnchor),
+            instagridImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            instagridImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            instagridStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            instagridStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            instagridStackView.arrangedSubviews.first!.widthAnchor.constraint(equalTo: instagridStackView.arrangedSubviews.last!.widthAnchor),
+            instagridStackView.arrangedSubviews.first!.heightAnchor.constraint(equalTo: instagridStackView.arrangedSubviews.last!.heightAnchor),
             gridStackView.heightAnchor.constraint(equalTo: baseUnit),
             instagridImageView.widthAnchor.constraint(equalTo: baseUnit, multiplier: 0.4),
             instagridImageView.heightAnchor.constraint(equalTo: baseUnit, multiplier: 0.2),
@@ -153,11 +144,11 @@ class InstagridViewController: UIViewController {
 
     /// Fill the portrait and landscape constraints collections.
     private func addOrientionConstrains() {
-        portraitConstraints.append(gridStackView.widthAnchor.constraint(equalTo: instagridStackView.widthAnchor, multiplier: 0.8))
-
-        landscapeConstraints.append(actionStackView.arrangedSubviews.first!.widthAnchor.constraint(equalToConstant: 0))
-        landscapeConstraints.append(gridStackView.widthAnchor.constraint(equalTo: instagridStackView.heightAnchor, multiplier: 0.8))
-        landscapeConstraints.append(gridStackView.centerXAnchor.constraint(equalTo: instagridStackView.centerXAnchor))
+        portraitConstraints.append(gridStackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8))
+        
+        landscapeConstraints.append(instagridStackView.arrangedSubviews.first!.widthAnchor.constraint(equalToConstant: 0))
+        landscapeConstraints.append(gridStackView.widthAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.75))
+        landscapeConstraints.append(gridStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor))
     }
 
     /// Update the layout according to the device orientation.
@@ -169,8 +160,8 @@ class InstagridViewController: UIViewController {
             swipeImageView.image = UIImage(named: "Arrow Up")
             swipeLabel.text = "Swipe up to share"
 
-            actionStackView.axis = .vertical
-            actionStackView.spacing = 35
+            instagridStackView.axis = .vertical
+            instagridStackView.spacing = 40
             layoutStackView.axis = .horizontal
             NSLayoutConstraint.deactivate(landscapeConstraints)
             NSLayoutConstraint.activate(portraitConstraints)
@@ -180,8 +171,8 @@ class InstagridViewController: UIViewController {
             swipeImageView.image = UIImage(named: "Arrow Left")
             swipeLabel.text = "Swipe left to share"
 
-            actionStackView.axis = .horizontal
-            actionStackView.spacing = 10
+            instagridStackView.axis = .horizontal
+            instagridStackView.spacing = 15
             layoutStackView.axis = .vertical
             NSLayoutConstraint.deactivate(portraitConstraints)
             NSLayoutConstraint.activate(landscapeConstraints)

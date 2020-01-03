@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		630A6B1823A28294003BD368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630A6B1723A28294003BD368 /* LaunchScreen.storyboard */; };
 		633EF2ED23A151A000C611DF /* GridStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633EF2EC23A151A000C611DF /* GridStackView.swift */; };
-		63552DDB23AEB19600CCB253 /* ScaleAspectFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63552DDA23AEB19600CCB253 /* ScaleAspectFit.swift */; };
+		63552DDB23AEB19600CCB253 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63552DDA23AEB19600CCB253 /* ImageView.swift */; };
 		6363247523B102FE001CD11F /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6363247423B102FE001CD11F /* .swiftlint.yml */; };
 		6372567C23A98687009CB37A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372567B23A98687009CB37A /* UIView.swift */; };
 		6374F26723AC324C005BB07D /* InstagridViewController+SwipeGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6374F26623AC324C005BB07D /* InstagridViewController+SwipeGestureRecognizer.swift */; };
@@ -27,7 +27,7 @@
 /* Begin PBXFileReference section */
 		630A6B1723A28294003BD368 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		633EF2EC23A151A000C611DF /* GridStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridStackView.swift; sourceTree = "<group>"; };
-		63552DDA23AEB19600CCB253 /* ScaleAspectFit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleAspectFit.swift; sourceTree = "<group>"; };
+		63552DDA23AEB19600CCB253 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		6363247423B102FE001CD11F /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		6372567B23A98687009CB37A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		6374F26623AC324C005BB07D /* InstagridViewController+SwipeGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstagridViewController+SwipeGestureRecognizer.swift"; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 		63C37D9D23A6876D00E2B7F6 /* Property Wrapper */ = {
 			isa = PBXGroup;
 			children = (
-				63552DDA23AEB19600CCB253 /* ScaleAspectFit.swift */,
+				63552DDA23AEB19600CCB253 /* ImageView.swift */,
 			);
 			path = "Property Wrapper";
 			sourceTree = "<group>";
@@ -244,7 +244,7 @@
 				6397D0BF23AA78990089BF69 /* PlusView.swift in Sources */,
 				6374F26723AC324C005BB07D /* InstagridViewController+SwipeGestureRecognizer.swift in Sources */,
 				637B412823AAAC7700165694 /* InstagridViewController+ImagePicker.swift in Sources */,
-				63552DDB23AEB19600CCB253 /* ScaleAspectFit.swift in Sources */,
+				63552DDB23AEB19600CCB253 /* ImageView.swift in Sources */,
 				6372567C23A98687009CB37A /* UIView.swift in Sources */,
 				633EF2ED23A151A000C611DF /* GridStackView.swift in Sources */,
 			);

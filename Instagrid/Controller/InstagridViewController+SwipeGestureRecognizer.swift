@@ -17,8 +17,8 @@ extension InstagridViewController {
         let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(gridSwiped(_:)))
         swipeGestureRecognizer.direction = direction
 
-        instagridStackView.gestureRecognizers?.removeAll()
-        instagridStackView.addGestureRecognizer(swipeGestureRecognizer)
+        view.gestureRecognizers?.removeAll()
+        view.addGestureRecognizer(swipeGestureRecognizer)
     }
 
     /// Swipe the grid and present the activity view controller.
