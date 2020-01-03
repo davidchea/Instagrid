@@ -61,10 +61,10 @@ class InstagridViewController: UIViewController {
         return stackView
     }()
 
-    @ImageView(UIImageView(image: UIImage(named: "Instagrid")))
+    @ScaleAspectFit(UIImageView(image: UIImage(named: "Instagrid")))
     private var instagridImageView
 
-    @ImageView(UIImageView(image: UIImage()))
+    @ScaleAspectFit(UIImageView(image: UIImage()))
     private var swipeImageView
 
     private let swipeLabel: UILabel = {
@@ -109,9 +109,11 @@ class InstagridViewController: UIViewController {
 
     /// Add the main stack view to the view and add each view to his respective stack view.
     private func buildView() {
+        instagridImageView.translatesAutoresizingMaskIntoConstraints = false
+        
         view.addSubview(instagridImageView)
         view.addSubview(instagridStackView)
-
+        
         [UIView(), swipeStackView, gridStackView, layoutStackView, UIView()].forEach { instagridStackView.addArrangedSubview($0) }
         [swipeImageView, swipeLabel].forEach { swipeStackView.addArrangedSubview($0) }
     }
