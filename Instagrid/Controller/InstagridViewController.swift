@@ -61,12 +61,15 @@ class InstagridViewController: UIViewController {
         return stackView
     }()
 
+    /// The logo.
     @ScaleAspectFit(UIImageView(image: UIImage(named: "Instagrid")))
     private var instagridImageView
 
+    /// The arrow above the label.
     @ScaleAspectFit(UIImageView(image: UIImage()))
     private var swipeImageView
 
+    /// The label indicating to swipe.
     private let swipeLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Delm-Medium", size: 21)
@@ -76,10 +79,16 @@ class InstagridViewController: UIViewController {
         return label
     }()
 
+    /// These constraints are activated when the device is in portrait.
     private var portraitConstraints = [NSLayoutConstraint]()
+    
+    /// These constraints are activated when the device is in landscape.
     private var landscapeConstraints = [NSLayoutConstraint]()
 
+    /// Used for selecting an image.
     let imagePickerController = UIImagePickerController()
+    
+    /// The tag of the selected image in the grid.
     var imageTappedTag = ImagePosition.none.rawValue
 
     // MARK: - Life cycle
@@ -165,6 +174,7 @@ class InstagridViewController: UIViewController {
             instagridStackView.axis = .vertical
             instagridStackView.spacing = 40
             layoutStackView.axis = .horizontal
+            
             NSLayoutConstraint.deactivate(landscapeConstraints)
             NSLayoutConstraint.activate(portraitConstraints)
         case .landscape:
@@ -176,6 +186,7 @@ class InstagridViewController: UIViewController {
             instagridStackView.axis = .horizontal
             instagridStackView.spacing = 15
             layoutStackView.axis = .vertical
+            
             NSLayoutConstraint.deactivate(portraitConstraints)
             NSLayoutConstraint.activate(landscapeConstraints)
         }

@@ -12,6 +12,7 @@ class GridStackView: UIStackView {
 
     // MARK: - Properties
 
+    /// An empty view for the grid stack view background color.
     private let backgroundView: UIView = {
         let view = UIView()
         view.backgroundColor = .layoutBlue
@@ -20,9 +21,13 @@ class GridStackView: UIStackView {
         return view
     }()
 
+    /// The stack view containing top left and top right images.
     let topImageStackView = UIStackView(arrangedSubviews: [PlusView(frame: CGRect()), PlusView(frame: CGRect())])
+    
+    /// The stack view containing bottom left and bottom right images.
     let bottomImageStackView = UIStackView(arrangedSubviews: [PlusView(frame: CGRect()), PlusView(frame: CGRect())])
 
+    /// The grid stack view spacing and margin.
     private let gridSpacing = CGFloat(10)
 
     // MARK: - Initializers

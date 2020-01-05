@@ -12,6 +12,7 @@ class PlusView: UIView {
 
     // MARK: - Properties
 
+    /// The image view containing the image selected by the user.
     let plusImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "Plus"))
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -20,6 +21,7 @@ class PlusView: UIView {
         return imageView
     }()
 
+    /// Check if the user has selected an image.
     var hasImage = false
 
     // MARK: - Initializers
