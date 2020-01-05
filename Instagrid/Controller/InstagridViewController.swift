@@ -94,7 +94,7 @@ class InstagridViewController: UIViewController {
 
         buildView()
         activateMainConstraints()
-        addOrientionConstrains()
+        addOrientionConstraints()
     }
 
     override func viewDidLayoutSubviews() {
@@ -145,7 +145,7 @@ class InstagridViewController: UIViewController {
     }
 
     /// Fill the portrait and landscape constraints collections.
-    private func addOrientionConstrains() {
+    private func addOrientionConstraints() {
         portraitConstraints.append(gridStackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8))
         
         landscapeConstraints.append(instagridStackView.arrangedSubviews.first!.widthAnchor.constraint(equalToConstant: 0))

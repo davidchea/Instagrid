@@ -14,8 +14,8 @@ class PlusView: UIView {
 
     let plusImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "Plus"))
-        imageView.contentMode = .center
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .center
 
         return imageView
     }()
