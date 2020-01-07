@@ -97,8 +97,9 @@ class InstagridViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .backgroundBlue
-
+        instagridImageView.translatesAutoresizingMaskIntoConstraints = false
         imagePickerController.delegate = self
+        
         addTapGestureRecognizers()
 
         buildView()
@@ -118,8 +119,6 @@ class InstagridViewController: UIViewController {
 
     /// Add the main stack view to the view and add each view to his respective stack view.
     private func buildView() {
-        instagridImageView.translatesAutoresizingMaskIntoConstraints = false
-        
         view.addSubview(instagridImageView)
         view.addSubview(instagridStackView)
         
