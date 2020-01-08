@@ -33,7 +33,8 @@ extension InstagridViewController: UIImagePickerControllerDelegate, UINavigation
         }
 
         plusView.plusImageView.image = image
-        plusView.plusImageView.contentMode = .scaleToFill
+        plusView.plusImageView.contentMode = .scaleAspectFill
+        plusView.plusImageView.clipsToBounds = true
 
         dismiss(animated: true, completion: nil)
     }

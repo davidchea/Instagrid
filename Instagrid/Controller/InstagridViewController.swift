@@ -48,7 +48,7 @@ class InstagridViewController: UIViewController {
         let stackView = UIStackView(arrangedSubviews: [
             UIImageView(image: UIImage(named: "Layout 1")),
             UIImageView(image: UIImage(named: "Selected Layout 2")),
-            UIImageView(image: UIImage(named: "Layout 2"))
+            UIImageView(image: UIImage(named: "Layout 3"))
         ])
         stackView.alignment = .center
         stackView.spacing = 40
@@ -108,7 +108,7 @@ class InstagridViewController: UIViewController {
     }
 
     override func viewDidLayoutSubviews() {
-        if UIDevice.current.orientation.isLandscape {
+        if UIApplication.shared.statusBarOrientation.isLandscape {
             setOrientationMode(.landscape)
         } else {
             setOrientationMode(.portrait)
